@@ -680,7 +680,7 @@ footer {
 }
 
 .inner {
-    margin: 40px auto 80px auto;
+    margin: 40px auto;
 }
 
 .nav-pills .nav-link.active,
@@ -810,9 +810,7 @@ footer {
 }
 
 .radio-view {
-    position: absolute;
     height: 35px;
-    top: 350px;
 }
 
 .add {

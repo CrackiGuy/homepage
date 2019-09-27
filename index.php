@@ -125,6 +125,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-12" style="height:35px;"></div>
+                                <div class="form-group col-8">
                                     <div class="radio-view">
                                         <div class="form-check-inline">
                                         <label class="form-check-label" for="radio1">
@@ -138,7 +141,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn-search">Search</button>
+                                <div class="form-group col-4">
+                                <button type="submit" class="btn-search float-right">Search</button>
+                                </div>
                             </form>
                         </div>
                         <div class="tab-pane inner fade" id="round">
