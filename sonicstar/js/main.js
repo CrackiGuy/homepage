@@ -21,7 +21,7 @@ $("#carousel-example").on("slide.bs.carousel", function(e) {
     }
 });
 $(document).ready(function() {
-    $('.select2class').select2();
+    $('.select2class').select2({ width: '180px' });
 });
 $(document).ready(function() {
     $("#my-form").submit(function(e) {
@@ -72,5 +72,19 @@ $(function() {
         }
     }, function(start, end, label) {
         console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+});
+
+$(document).ready(function() {
+    $('#qty_input').prop('disabled', true);
+    $('#plus-btn').click(function() {
+        $('#qty_input').val(parseInt($('#qty_input').val()) + 1);
+    });
+    $('#minus-btn').click(function() {
+        $('#qty_input').val(parseInt($('#qty_input').val()) - 1);
+        if ($('#qty_input').val() == 0) {
+            $('#qty_input').val(1);
+        }
+
     });
 });

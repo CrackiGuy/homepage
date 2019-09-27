@@ -74,11 +74,62 @@
                                     <input type="text" class="form-control" id="date" placeholder="Date">
                                 </div>
                                 <div class="passenger">
-                                    <button class="btn btn-light btn-passenger" data-toggle="collapse" data-target="#demo">Adult 1, Child 0, Infant
-									0</button>
+                                    <div class="btn btn-light btn-passenger" data-toggle="collapse" 
+                                    data-target="#demo">Adult 1, Child 0, Infant 0</div>
                                     <br>
                                     <div id="demo" class="view-passenger collapse">
-                                        aaa
+                                        <div class="input-group">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="input-group name-holder">
+                                                        <span class="name">Adult</span>
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                        </div>
+                                                        <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="input-group name-holder">
+                                                        <span class="name">Child</span>
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                        </div>
+                                                        <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="input-group name-holder">
+                                                        <span class="name">Adart</span>
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                        </div>
+                                                        <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radio-view">
+                                    <div class="form-check-inline">
+                                    <label class="form-check-label" for="radio1">
+                                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="citizen" checked>Citizen
+                                    </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                    <label class="form-check-label" for="radio2">
+                                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="forienger">Forienger
+                                    </label>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn-search">Search</button>
