@@ -21,6 +21,9 @@ $("#carousel-example").on("slide.bs.carousel", function(e) {
     }
 });
 $(document).ready(function() {
+    $('.select2class').select2();
+});
+$(document).ready(function() {
     $("#my-form").submit(function(e) {
         e.preventDefault();
         $.ajax({

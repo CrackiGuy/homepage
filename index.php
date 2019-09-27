@@ -12,6 +12,7 @@
 
         <title>Sonicstar</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />        
         <link rel="stylesheet" href="sonicstar/vendor/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
@@ -60,25 +61,15 @@
                     <div class="tab-content">
                         <div class="tab-pane inner active" id="one">
                             <form class="form-inline" action="#search">
-                                <div class="form-group">
-                                    <select class="form-control" id="from">
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-								</select>
-                                </div>
+                                <select class="select2class" name="state">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
                                 <i class="fa fa-exchange d-icon"></i>
-                                <div class="form-group">
-                                    <select class="form-control" id="from">
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-								</select>
-                                </div>
+                                <select class="select2class" name="state">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="date" placeholder="Date">
                                 </div>
@@ -117,7 +108,7 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="date" placeholder="Date">
                                 </div>
-                                <button class="btn btn-light btn-passenger">Adult 1, Child 0, Infant 0</button>
+                                <button class="btn btn-passenger">Adult 1, Child 0, Infant 0</button>
 
                                 <button type="submit" class="btn-search">Search</button>
                             </form>
@@ -242,6 +233,7 @@
         </a>
         <!-- Bootstrap core JavaScript -->
         <script src="sonicstar/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
