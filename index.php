@@ -61,75 +61,81 @@
                     <div class="tab-content">
                         <div class="tab-pane inner active" id="one">
                             <form class="form-inline" action="#search">
-                                <select class="select2class" name="state">
-                                    <option value="AL">Alabama</option>
-                                    <option value="WY">Wyoming</option>
-                                </select>
+                                <div class="form-group col-md-12 col-lg-3">
+                                    <select class="select2class" name="state">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
                                 <i class="fa fa-exchange d-icon"></i>
-                                <select class="select2class" name="state">
-                                    <option value="AL">Alabama</option>
-                                    <option value="WY">Wyoming</option>
-                                </select>
-                                <div class="form-group">
+                                <div class="form-group col-md-12 col-lg-3">
+                                    <select class="select2class" name="state">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12 col-lg-3">
                                     <input type="text" class="form-control" id="date" placeholder="Date">
                                 </div>
-                                <div class="passenger">
-                                    <div class="btn btn-light btn-passenger" data-toggle="collapse" 
-                                    data-target="#demo">Adult 1, Child 0, Infant 0</div>
-                                    <br>
-                                    <div id="demo" class="view-passenger collapse">
-                                        <div class="input-group">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="input-group name-holder">
-                                                        <span class="name">Adult</span>
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
-                                                        </div>
-                                                        <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="input-group name-holder">
-                                                        <span class="name">Child</span>
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
-                                                        </div>
-                                                        <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                <div class="form-group col-md-12 col-lg-2">
+                                    <div class="passenger">
+                                        <div class="btn btn-light btn-passenger" data-toggle="collapse" 
+                                        data-target="#demo">Adult 1, Child 0, Infant 0</div>
+                                        <br>
+                                        <div id="demo" class="view-passenger collapse">
+                                            <div class="input-group">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="input-group name-holder">
+                                                            <span class="name">Adult</span>
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                            </div>
+                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="input-group name-holder">
-                                                        <span class="name">Adart</span>
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                    <div class="col-12">
+                                                        <div class="input-group name-holder">
+                                                            <span class="name">Child</span>
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                            </div>
+                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                            </div>
                                                         </div>
-                                                        <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="input-group name-holder">
+                                                            <span class="name">Adart</span>
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                            </div>
+                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="radio-view">
-                                    <div class="form-check-inline">
-                                    <label class="form-check-label" for="radio1">
-                                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="citizen" checked>Citizen
-                                    </label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                    <label class="form-check-label" for="radio2">
-                                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="forienger">Forienger
-                                    </label>
+                                    <div class="radio-view">
+                                        <div class="form-check-inline">
+                                        <label class="form-check-label" for="radio1">
+                                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="citizen" checked>Citizen
+                                        </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                        <label class="form-check-label" for="radio2">
+                                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="forigenr">Forienger
+                                        </label>
+                                        </div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn-search">Search</button>
