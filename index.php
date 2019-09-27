@@ -26,36 +26,31 @@
         <br>
         <div class="container">
             <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
+            <ul class="nav nav-tabs head" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#fligt">
                         <i class="fa fa-plane" aria-hidden="true"></i>
-                        Air Ticketing</a>
+                        <span class="d-none d-lg-inline"> Air Ticketing</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#car">
                         <i class="fa fa-car" aria-hidden="true"></i>
-                        Car Rental</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#air">
-                        <i class="fa fa-car" aria-hidden="true"></i>
-                        Airport Transfer</a>
+                        <span class="d-none d-lg-inline">Car Rental</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#tour">
                         <i class="fa fa-flag" aria-hidden="true"></i>
-                        Tour Packages</a>
+                        <span class="d-none d-lg-inline">Tour Packages</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#visa">
                         <i class="fa fa-globe" aria-hidden="true"></i>
-                        Visa Services</a>
+                        <span class="d-none d-lg-inline">Visa Services</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#hotel">
                         <i class="fa fa-bed" aria-hidden="true"></i>
-                        Hotel Booking</a>
+                        <span class="d-none d-lg-inline">Hotel Booking</span></a>
                 </li>
             </ul>
 
@@ -72,7 +67,7 @@
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div class="tab-pane inner active" id="one">
+                        <div class="tab-pane inner active" id="one-date">
                             <form class="form-inline" action="#search">
                                 <div class="form-group col-md-12 col-lg-3">
                                     <select class="select2class" name="state">
@@ -88,7 +83,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12 col-lg-3">
-                                    <input type="text" class="form-control" id="date" placeholder="Date">
+                                    <input type="text" class="form-control" id="one" placeholder="Date">
                                 </div>
                                 <div class="form-group col-md-12 col-lg-2">
                                     <div class="passenger">
@@ -161,31 +156,89 @@
                         </div>
                         <div class="tab-pane inner fade" id="round">
                             <form class="form-inline" action="#search">
-                                <div class="form-group">
-                                    <select class="form-control" id="from">
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-								</select>
+                                <div class="form-group col-md-12 col-lg-3">
+                                    <select class="select2class" name="state">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
                                 </div>
                                 <i class="fa fa-exchange d-icon"></i>
-                                <div class="form-group">
-                                    <select class="form-control" id="from">
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-									<option>Hello Man</option>
-								</select>
+                                <div class="form-group col-md-12 col-lg-3">
+                                    <select class="select2class" name="state">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="date" placeholder="Date">
+                                <div class="form-group col-md-12 col-lg-3">
+                                    <input type="text" class="form-control" id="round-date" placeholder="Date">
                                 </div>
-                                <button class="btn btn-passenger">Adult 1, Child 0, Infant 0</button>
-
-                                <button type="submit" class="btn-search">Search</button>
+                                <div class="form-group col-md-12 col-lg-2">
+                                    <div class="passenger">
+                                        <div class="btn btn-light btn-passenger" data-toggle="collapse" 
+                                        data-target="#demo">Adult 1, Child 0, Infant 0</div>
+                                        <br>
+                                        <div id="demo" class="view-passenger collapse">
+                                            <div class="input-group">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="input-group name-holder">
+                                                            <span class="name">Adult</span>
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                            </div>
+                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="input-group name-holder">
+                                                            <span class="name">Child</span>
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                            </div>
+                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="input-group name-holder">
+                                                            <span class="name">Adart</span>
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
+                                                            </div>
+                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12" style="height:35px;"></div>
+                                <div class="form-group col-8">
+                                    <div class="radio-view">
+                                        <div class="form-check-inline">
+                                        <label class="form-check-label" for="radio1">
+                                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="citizen" checked>Citizen
+                                        </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                        <label class="form-check-label" for="radio2">
+                                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="forigenr">Forienger
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-4">
+                                <button type="submit" class="btn-search float-right">Search</button>
+                                </div>
                             </form>
                         </div>
                     </div>

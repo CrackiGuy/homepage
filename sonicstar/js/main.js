@@ -64,17 +64,22 @@ $(".tabs").on("click", "a", function(e) {
 
 //Datepicker
 $(function() {
-    $('#date').daterangepicker({
+    $('#round-date').daterangepicker({
         opens: 'right',
         minDate: new Date(),
         locale: {
             format: 'D MMM YYYY'
         }
-    }, function(start, end, label) {
-        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+    $('#one-date').daterangepicker({
+        singleDatePicker: true,
+        opens: 'right',
+        minDate: new Date(),
+        locale: {
+            format: 'D MMM YYYY'
+        }
     });
 });
-
 $(document).ready(function() {
     $('#qty_input').prop('disabled', true);
     $('#plus-btn').click(function() {
