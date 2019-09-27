@@ -67,7 +67,7 @@
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div class="tab-pane inner active" id="one-date">
+                        <div class="tab-pane inner active" id="one">
                             <form class="form-inline" action="#search">
                                 <div class="form-group col-md-12 col-lg-3">
                                     <select class="select2class" name="state">
@@ -83,7 +83,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12 col-lg-3">
-                                    <input type="text" class="form-control" id="one" placeholder="Date">
+                                    <input type="text" class="form-control" id="one-date" placeholder="Date">
                                 </div>
                                 <div class="form-group col-md-12 col-lg-2">
                                     <div class="passenger">
