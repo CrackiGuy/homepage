@@ -669,6 +669,7 @@ footer {
 
 .nav-link {
     color: #222;
+    font-size: 14px;
 }
 
 .nav-link:hover {
@@ -788,11 +789,11 @@ footer {
 }
 
 .name-holder {
-    margin: 15px 10px;
+    margin: 10px;
 }
 
 .name {
-    padding: 5px 50px 5px 5px;
+    padding: 5px 30px 5px 5px;
     font-size: 15px;
 }
 

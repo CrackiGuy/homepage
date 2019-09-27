@@ -23,26 +23,39 @@
         <div class="header">
             <img src="sonicstar/img/logo.png" alt="Sonicstar" />
         </div>
+        <br>
         <div class="container">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#fligt">Air Ticketing</a>
+                    <a class="nav-link active" data-toggle="tab" href="#fligt">
+                        <i class="fa fa-plane" aria-hidden="true"></i>
+                        Air Ticketing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#car">Car Rental</a>
+                    <a class="nav-link" data-toggle="tab" href="#car">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        Car Rental</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#air">Airport Transfer</a>
+                    <a class="nav-link" data-toggle="tab" href="#air">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        Airport Transfer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#tour">Tour Packages</a>
+                    <a class="nav-link" data-toggle="tab" href="#tour">
+                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        Tour Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#visa">Visa Services</a>
+                    <a class="nav-link" data-toggle="tab" href="#visa">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        Visa Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#hotel">Hotel Booking</a>
+                    <a class="nav-link" data-toggle="tab" href="#hotel">
+                        <i class="fa fa-bed" aria-hidden="true"></i>
+                        Hotel Booking</a>
                 </li>
             </ul>
 
