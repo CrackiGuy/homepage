@@ -1,667 +1,735 @@
-        *:focus {
-            outline: none !important;
-        }
-        
-        body,
-        html {
-            padding: 0;
-            margin: 0;
-            font-family: "Oxygen", sans-serif;
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
-        
-        .car-image {
-            background: #f7f7f7 none repeat scroll 0 0;
-            padding: 20px 20px;
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .car-box-inner {
-            border: 1px solid #efefef;
-            background: #fff;
-        }
-        
-        .pa {
-            padding: 8px !important;
-        }
-        
-        .header {
-            margin: 20px auto 20px auto;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .header img {
-            width: 400px;
-        }
-        
-        .projects {
-            margin: 20px auto;
-        }
-        
-        .project {
-            vertical-align: top;
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .project img {
-            width: 70px;
-            height: 70px;
-            cursor: pointer;
-            border-radius: 50%;
-            padding: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
-        
-        .project img:hover {
-            transform: scale(1.1);
-            border: 2px solid white;
-            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.7);
-        }
-        
-        #flight {
-            background-color: #f15d59;
-        }
-        
-        #car {
-            background-color: #eda822;
-            padding: 10px !important;
-        }
-        
-        #transport {
-            background-color: #3ebca5;
-        }
-        
-        #tour {
-            background-color: #2995c1;
-        }
-        
-        #visa {
-            background-color: #ef7227;
-        }
-        
-        #hotel {
-            background-color: #4fb86c;
-        }
-        /* Centered text */
-        
-        .centered {
-            font-size: 2em;
-            font-weight: bold;
-            color: white;
-            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .card-view {
-            display: block;
-            position: relative;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            padding: 0;
-            cursor: pointer;
-        }
-        
-        figure {
-            margin: 0;
-            padding: 0;
-            background: #fff;
-            overflow: hidden;
-        }
-        
-        .card-view img {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transition: 0.3s ease-in-out;
-            transition: 0.3s ease-in-out;
-        }
-        
-        .card-view figure:hover img {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-        }
-        
-        .card-view figure div:hover img {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-        }
-        
-        .project a {
-            text-decoration: none;
-            color: #000;
-            outline: none;
-        }
-        
-        .project label {
-            display: block;
-            font-size: 15px;
-            font-weight: bold;
-            color: #606060;
-            margin-top: 10px;
-        }
-        
-        .welcome {
-            text-align: center;
-            width: 100%;
-            margin: 20px;
-            font-size: 24px;
-        }
-        
-        footer {
-            position: fixed;
-            height: 170px;
-            bottom: 0;
-            width: 100%;
-        }
-        
-        .upper {
-            height: 100px;
-        }
-        
-        .bottom {
-            background: #bc2220;
-            height: 70px;
-        }
-        
-        .payment img {
-            width: 60px;
-            height: 40px;
-            margin: 5px;
-            float: left;
-        }
-        
-        .accept {
-            height: 15px;
-            margin-left: 10px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        
-        .payment span {
-            color: #fff;
-            font-size: 1em;
-        }
-        
-        .social img {
-            width: 50px;
-            margin: 10px;
-            float: left;
-            cursor: pointer;
-        }
-        
-        .cert img {
-            width: 50px;
-            margin: 20px 10px;
-            float: left;
-        }
-        
-        .follow {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #fff;
-        }
-        
-        .footer-txt {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 1.2em;
-            color: #fff;
-        }
-        
-        .footer-txt a {
-            color: #fff;
-        }
-        
-        #subscribe {
-            background: #ddd;
-            padding-left: 15px;
-            width: 60%;
-            border-radius: 10px;
-            height: 45px;
-        }
-        
-        #btn-sub {
-            width: 130px;
-            background: #bc2220;
-            border-radius: 10px;
-            color: #fff;
-            padding: 13px;
-            border: 0;
-        }
-        
-        .img-fluid {
-            cursor: pointer;
-            /*height: 240px;*/
-            /*min-height: 240px;*/
-        }
-        
-        .carousel-control-prev {
-            margin-left: -30px !important;
-            background: #ddd;
-            width: 30px;
-            height: 30px;
-            margin-top: 100px;
-        }
-        
-        .carousel-control-next {
-            margin-right: -30px !important;
-            background: #ddd;
-            width: 30px;
-            height: 30px;
-            margin-top: 100px;
-        }
-        
-        .carousel-control-prev-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-        }
-        
-        .carousel-control-next-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-        }
-        
-        .car-details {
-            width: 100%;
-        }
-        
-        .car-details a {
-            width: 100%;
-            padding: 5px;
-            margin-top: 5px;
-            text-decoration: none;
-            background: #808080;
-            color: #fff;
-            display: block;
-        }
-        
-        .car-details a:hover {
-            background: #bc2220;
-        }
-        
-        .car-details h5 {
-            font-size: 15px;
-            font-weight: bold;
-            padding: 5px;
-            color: #606060;
-        }
-        
-        @media (max-height: 800px) {
-            footer {
-                position: relative;
-            }
-        }
-        
-        @media (min-width: 768px) and (max-width: 1024px) {
-            #btn-sub {
-                width: 90px;
-                padding-left: 10px;
-            }
-            .footer-txt {
-                font-size: 0.9em;
-                margin-top: 25px;
-            }
-            .img-fluid {
-                height: 300px;
-                min-height: 300px;
-                width: 300px;
-                min-width: 300px;
-            }
-            .border {
-                border: 1px soild #808080;
-                padding-top: 10px;
-            }
-        }
-        /* 
+*:focus {
+    outline: none;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.car-image {
+    background: #f7f7f7 none repeat scroll 0 0;
+    padding: 20px 20px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.car-box-inner {
+    border: 1px solid #efefef;
+    background: #fff;
+}
+
+.pa {
+    padding: 8px !important;
+}
+
+.header {
+    margin: 20px auto 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.header img {
+    width: 400px;
+}
+
+.projects {
+    margin: 20px auto;
+}
+
+.project {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.project img {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#flight {
+    background-color: #f15d59;
+}
+
+#car {
+    background-color: #eda822;
+    padding: 10px !important;
+}
+
+#transport {
+    background-color: #3ebca5;
+}
+
+#tour {
+    background-color: #2995c1;
+}
+
+#visa {
+    background-color: #ef7227;
+}
+
+#hotel {
+    background-color: #4fb86c;
+}
+
+
+/* Centered text */
+
+.centered {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 5px gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-view {
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 0;
+    cursor: pointer;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.card-view img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.card-view figure:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.card-view figure div:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.project a {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+.project label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #606060;
+    margin-top: 10px;
+}
+
+.welcome {
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+    font-size: 24px;
+}
+
+footer {
+    position: fixed;
+    height: 170px;
+    bottom: 0;
+    width: 100%;
+}
+
+.social {
+    margin-left: 50px;
+}
+
+.cert {
+    margin-right: 50px;
+}
+
+.lowest * {
+    font-size: 12px !important;
+    color: white;
+    background: #730606;
+}
+
+.lowest a {
+    color: #03c1b5;
+}
+
+.upper {
+    height: 100px;
+}
+
+.bottom {
+    background: #bc2220;
+}
+
+.payment img {
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    float: left;
+}
+
+.accept {
+    height: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.payment span {
+    color: #fff;
+    font-size: 1em;
+}
+
+.social img {
+    width: 50px;
+    margin: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.cert img {
+    width: 50px;
+    margin: 20px 10px;
+    float: left;
+}
+
+.follow {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.footer-txt {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.footer-txt a {
+    color: #fff;
+}
+
+#subscribe {
+    background: #ddd;
+    padding-left: 15px;
+    width: 60%;
+    border-radius: 10px;
+    height: 45px;
+}
+
+#btn-sub {
+    width: 130px;
+    background: #bc2220;
+    border-radius: 10px;
+    color: #fff;
+    padding: 13px;
+    border: 0;
+}
+
+.img-fluid {
+    cursor: pointer;
+    /*height: 240px;*/
+    /*min-height: 240px;*/
+}
+
+.carousel-control-prev {
+    margin-left: -30px !important;
+    background: #ddd;
+    width: 30px;
+    height: 30px;
+    margin-top: 100px;
+}
+
+.carousel-control-next {
+    margin-right: -30px !important;
+    background: #ddd;
+    width: 30px;
+    height: 30px;
+    margin-top: 100px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.car-details {
+    width: 100%;
+}
+
+.car-details a {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    background: #808080;
+    color: #fff;
+    display: block;
+}
+
+.car-details a:hover {
+    background: #bc2220;
+}
+
+.car-details h5 {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    color: #606060;
+}
+
+@media (max-height: 1000px) {
+    footer {
+        position: relative;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .centered {
+        font-size: 18px;
+    }
+    footer {
+        position: relative;
+        width: 100%;
+    }
+    #btn-sub {
+        width: 90px;
+        padding-left: 10px;
+    }
+    .footer-txt {
+        font-size: 0.9em;
+        margin-top: 25px;
+    }
+    .img-fluid {
+        height: 300px;
+        min-height: 300px;
+        width: 300px;
+        min-width: 300px;
+    }
+    .border {
+        border: 1px soild #808080;
+        padding-top: 10px;
+    }
+}
+
+
+/* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
-        
-        @media (min-width: 481px) and (max-width: 767px) {}
-        /* 
+
+@media (min-width: 481px) and (max-width: 767px) {}
+
+
+/* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-        
-        @media (min-width: 320px) and (max-width: 480px) {
-            footer {
-                position: relative;
-                width: 100%;
-            }
-            #btn-sub {
-                width: 90px;
-                padding-left: 10px;
-            }
-            .upper {
-                height: 180px;
-            }
-            .bottom {
-                height: 200px;
-            }
-            .footer-txt {
-                font-size: 1.1em;
-                margin-top: 0;
-            }
-            .header img {
-                width: 300px;
-            }
-        }
-        
-        @media (min-width: 768px) and (max-width: 991px) {
-            /* Show 4th slide on md if col-md-4*/
-            .carousel-inner .active.col-md-6.carousel-item+.carousel-item+.carousel-item {
-                position: absolute;
-                top: 0;
-                right: -50%;
-                /*change this with javascript in the future*/
-                z-index: -1;
-                display: block;
-                visibility: visible;
-            }
-        }
-        
-        @media (min-width: 576px) and (max-width: 768px) {
-            /* Show 3rd slide on sm if col-sm-6*/
-            .carousel-inner .active.col-sm-6.carousel-item+.carousel-item+.carousel-item {
-                position: absolute;
-                top: 0;
-                right: -50%;
-                /*change this with javascript in the future*/
-                z-index: -1;
-                display: block;
-                visibility: visible;
-            }
-        }
-        
-        @media (min-width: 576px) {
-            .carousel-item {
-                margin-right: 0;
-            }
-            /* show 2 items */
-            .carousel-inner .active+.carousel-item {
-                display: block;
-            }
-            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item {
-                transition: none;
-            }
-            .carousel-inner .carousel-item-next {
-                position: relative;
-                transform: translate3d(0, 0, 0);
-            }
-            /* left or forward direction */
-            .active.carousel-item-left+.carousel-item-next.carousel-item-left,
-            .carousel-item-next.carousel-item-left+.carousel-item,
-            .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
-                position: relative;
-                transform: translate3d(-100%, 0, 0);
-                visibility: visible;
-            }
-            /* farthest right hidden item must be also positioned for animations */
-            .carousel-inner .carousel-item-prev.carousel-item-right {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                display: block;
-                visibility: visible;
-            }
-            /* right or prev direction */
-            .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
-            .carousel-item-prev.carousel-item-right+.carousel-item,
-            .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item {
-                position: relative;
-                transform: translate3d(100%, 0, 0);
-                visibility: visible;
-                display: block;
-                visibility: visible;
-            }
-        }
-        /* MD */
-        
-        @media (min-width: 768px) {
-            /* show 3rd of 3 item slide */
-            .carousel-inner .active+.carousel-item+.carousel-item {
-                display: block;
-            }
-            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
-                transition: none;
-            }
-            .carousel-inner .carousel-item-next {
-                position: relative;
-                transform: translate3d(0, 0, 0);
-            }
-            /* left or forward direction */
-            .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
-                position: relative;
-                transform: translate3d(-100%, 0, 0);
-                visibility: visible;
-            }
-            /* right or prev direction */
-            .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
-                position: relative;
-                transform: translate3d(100%, 0, 0);
-                visibility: visible;
-                display: block;
-                visibility: visible;
-            }
-        }
-        /* LG */
-        
-        @media (min-width: 991px) {
-            /* show 4th item */
-            .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
-                display: block;
-            }
-            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
-                transition: none;
-            }
-            /* Show 5th slide on lg if col-lg-3 */
-            .carousel-inner .active.col-lg-3.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-                position: absolute;
-                top: 0;
-                right: -25%;
-                /*change this with javascript in the future*/
-                z-index: -1;
-                display: block;
-                visibility: visible;
-            }
-            /* left or forward direction */
-            .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-                position: relative;
-                transform: translate3d(-100%, 0, 0);
-                visibility: visible;
-            }
-            /* right or prev direction //t - previous slide direction last item animation fix */
-            .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-                position: relative;
-                transform: translate3d(100%, 0, 0);
-                visibility: visible;
-                display: block;
-                visibility: visible;
-            }
-        }
-        
-        .float {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            bottom: 100px;
-            right: 40px;
-            background: transparent;
-            border-radius: 50px;
-            text-align: center;
-        }
-        
-        .float img {
-            width: 40px;
-            height: 40px;
-        }
-        /* Search Form */
-        
-        .s-card {
-            margin-top: 20px;
-            border-radius: 10px;
-            background-color: #fff;
-            height: 200px;
-            box-shadow: 0 12px 38px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            min-width: 1000px;
-            width: 1000px;
-            margin: auto;
-        }
-        
-        .search-form {
-            margin: 10px 20px
-        }
-        
-        #passenger {
-            width: 220px;
-        }
-        
-        .search-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 30px;
-            border: 0;
-            color: #fff;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
-            background: -moz-linear-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
-            background: -webkit-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
-            background: linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
-        }
-        
-        .search-form input {
-            outline: 0;
-            background: #f2f2f2;
-            border: 0;
-            margin-right: 10px;
-            padding: 13px;
-            box-sizing: border-box;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            font-size: 14px;
-        }
-        
-        .tabs {
-            margin: 20px;
-            font-size: 15px;
-            padding: 0px;
-            list-style: none;
-            background: #fff;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            border-radius: 50px;
-            position: relative;
-        }
-        
-        .tabs a {
-            text-decoration: none;
-            color: #777;
-            text-transform: uppercase;
-            padding: 10px 20px;
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            transition-duration: 0.6s;
-        }
-        
-        .tabs a.active {
-            color: #fff;
-        }
-        
-        .tabs a i {
-            margin-right: 5px;
-        }
-        
-        .tabs .selector {
-            height: 100%;
-            display: inline-block;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            z-index: 1;
-            border-radius: 50px;
-            transition-duration: 0.6s;
-            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            background: #de3d3b;
-            background: -moz-linear-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
-            background: -webkit-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
-            background: linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4', GradientType=1);
-        }
-        /* Tabs */
-        
-        .nav-link {
-            color: #222;
-        }
-        
-        .nav-link:hover {
-            color: #bc2220;
-        }
-        
-        .nav-item .active {
-            color: #bc2220 !important;
-        }
-        
-        .inner {
-            margin: 50px 0;
-        }
-        
-        .nav-pills .nav-link.active,
-        .show>.nav-pills .nav-link {
-            color: #fff !important;
-            background-color: #bc2220;
-        }
-        
-        #from,
-        #to {
-            width: 180px;
-            margin-right: 10px;
-        }
-        
-        #date {
-            margin-right: 10px;
-        }
-        
-        .d-icon {
-            margin-right: 10px;
-        }
-        
-        .btn-search {
-            padding: 7px 25px;
-            margin-left: 20px;
-            border: 0;
-            color: #fff;
-            background: #bc2220;
-        }
-        
-        .passenger {
-            position: relative;
-        }
-        
-        .btn-passenger {
-            color: #bc2220;
-        }
-        
-        .view-passenger {
-            position: absolute;
-            background: #eee;
-            width: 218px;
-            height: 200px;
-            z-index: 1;
-        }
-        
-        .t-border {
-            border-right: 1px solid #ddd;
-            border-left: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-        }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .social {
+        margin-left: 20px;
+    }
+    .social img {
+        width: 30px;
+        margin: 5px;
+    }
+    .cert img {
+        width: 35px;
+        margin: 5px;
+    }
+    .col-6 {
+        padding: 0 !important;
+    }
+    .centered {
+        font-size: 20px;
+    }
+    footer {
+        position: relative;
+        width: 100%;
+    }
+    #btn-sub {
+        width: 90px;
+        padding-left: 10px;
+    }
+    .upper {
+        height: 180px;
+    }
+    .footer-txt {
+        font-size: 1.1em;
+        margin-top: 0;
+    }
+    .header img {
+        width: 300px;
+    }
+    .border {
+        border: 1px soild #808080;
+        padding-top: 10px;
+    }
+    .card-view figure {
+        margin: 10px 0;
+    }
+    .carousel-control-prev {
+        margin-left: -15px !important;
+    }
+    .carousel-control-next {
+        margin-right: -15px !important;
+    }
+}
+
+.border {
+    border: 1px solid #e9ecef !important;
+    padding: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-6.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+
+/* MD */
+
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active+.carousel-item+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+
+/* LG */
+
+@media (min-width: 991px) {
+    /* show 4th item */
+    .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+.float {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 100px;
+    right: 40px;
+    background: transparent;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.float img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Search Form */
+
+.s-card {
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 200px;
+    box-shadow: 0 12px 38px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    min-width: 1000px;
+    width: 1000px;
+    margin: auto;
+}
+
+.search-form {
+    margin: 10px 20px
+}
+
+#passenger {
+    width: 220px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 0;
+    color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+    background: -moz-linear-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
+    background: -webkit-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
+    background: linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
+}
+
+.search-form input {
+    outline: 0;
+    background: #f2f2f2;
+    border: 0;
+    margin-right: 10px;
+    padding: 13px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+}
+
+.tabs {
+    margin: 20px;
+    font-size: 15px;
+    padding: 0px;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #777;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition-duration: 0.6s;
+}
+
+.tabs a.active {
+    color: #fff;
+}
+
+.tabs a i {
+    margin-right: 5px;
+}
+
+.tabs .selector {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    border-radius: 50px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: #de3d3b;
+    background: -moz-linear-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
+    background: -webkit-linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
+    background: linear-gradient(45deg, #de3d3b 0%, #ff008d 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4', GradientType=1);
+}
+
+
+/* Tabs */
+
+.nav-link {
+    color: #222;
+}
+
+.nav-link:hover {
+    color: #bc2220;
+}
+
+.nav-item .active {
+    color: #bc2220 !important;
+}
+
+.inner {
+    margin: 50px 0;
+}
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link {
+    color: #fff !important;
+    background-color: #bc2220;
+}
+
+#from,
+#to {
+    width: 180px;
+    margin-right: 10px;
+}
+
+#date {
+    margin-right: 10px;
+}
+
+.d-icon {
+    margin-right: 10px;
+}
+
+.btn-search {
+    padding: 7px 25px;
+    margin-left: 20px;
+    border: 0;
+    color: #fff;
+    background: #bc2220;
+}
+
+.passenger {
+    position: relative;
+}
+
+.btn-passenger {
+    color: #bc2220;
+}
+
+.view-passenger {
+    position: absolute;
+    background: #eee;
+    width: 218px;
+    height: 200px;
+    z-index: 1;
+}
+
+.t-border {
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
