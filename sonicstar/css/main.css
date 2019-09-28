@@ -682,7 +682,8 @@
         background-color: #bc2220;
     }
     
-    #date,
+    #one-date,
+    #round-date,
     .btn {
         border-radius: 0;
         border: 0;
@@ -755,7 +756,8 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     }
     
-    #date {
+    #one-date,
+    #round-date {
         display: block;
         border-bottom: 1px solid #aaa;
         width: 100%;
