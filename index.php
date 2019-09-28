@@ -109,10 +109,10 @@
                                             <!-- local button -->
                                             <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" >
                                                 Adult
-                                                <input type="text" id="quantity_1" name="adult_quantity[]" class=" input-number " value="1" min="1" max="9" readonly="readonly">, Child
-                                                <input type="text" id="child_quantity_1" name="child_quantity[]" class=" input-number" value="0" min="1" max="9" readonly="readonly">, Infant
-                                                <input type="text" id="infant_quantity_1" name="infant_quantity[]" class=" input-number" value="0" min="1" max="4" readonly="readonly">
-                                                <input type="hidden" id="total_quantity" name="total_quantity[]" class=" input-number" value="1" min="1" max="9">
+                                                <input type="text" id="quantity_1" name="adult_quantity[]" class="input-number " value="1" min="1" max="9" readonly="readonly">, Child
+                                                <input type="text" id="child_quantity_1" name="child_quantity[]" class="input-number" value="0" min="1" max="9" readonly="readonly">, Infant
+                                                <input type="text" id="infant_quantity_1" name="infant_quantity[]" class="input-number" value="0" min="1" max="4" readonly="readonly">
+                                                <input type="hidden" id="total_quantity" name="total_quantity[]" class="input-number" value="1" min="1" max="9">
                                                 <span class="input-group-btn">
                                                     <a href="#" class="badge badge-success" id="badges">Citizen</a>
                                           <!-- <a href="#" class="badge badge-success" id="foregin_badges">Foreginer</a> -->
