@@ -68,70 +68,112 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div class="tab-pane inner active" id="one">
-                            <form class="form-inline" action="#search">
+                            <form class="form-inline" action="http://localhost:8000/search" method="GET">
+                                <input name="flight_count" value="1" id="flight_count" type="hidden">
+                                <input type="hidden" name="page" value="0" >
+                                <input type="hidden" name="flight_status" value="oneway">
                                 <div class="form-group col-md-12 col-lg-3">
-                                    <select class="select2class" name="state">
-                                        <option value="AL">Alabama</option>
-                                        <option value="WY">Wyoming</option>
+                                    <select class="select2class" name="departure_location[]" id="onedept">
+                                     <?php
+                                            if ($city1->num_rows > 0) {
+                                                                                
+                                                while($row = $city1->fetch_assoc()) {
+                                                // var_dump($row["name"]);
+                                                echo "<option>".$row["name"]."</option>";
+                                                }
+                                            }  
+                                     ?>
                                     </select>
                                 </div>
                                 <i class="fa fa-exchange d-icon"></i>
                                 <div class="form-group col-md-12 col-lg-3">
-                                    <select class="select2class" name="state">
-                                        <option value="AL">Alabama</option>
-                                        <option value="WY">Wyoming</option>
+                                    <select class="select2class" name="arrival_location[]" id="onearr">
+                                    <?php
+                                            if ($city2->num_rows > 0) {
+                                                                                
+                                                while($row = $city2->fetch_assoc()) {
+                                                // var_dump($row["name"]);
+                                                echo "<option>".$row["name"]."</option>";
+                                                }
+                                            }  
+                                     ?>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12 col-lg-3">
-                                    <input type="text" class="form-control" id="one-date" placeholder="Date">
+                                    <input type="text" class="form-control" id="one-date" name="departure_date[]" placeholder="Date" readonly>
                                 </div>
                                 <div class="form-group col-md-12 col-lg-2">
                                     <div class="passenger">
-                                        <div class="btn btn-light btn-passenger" data-toggle="collapse" 
-                                        data-target="#demo">Adult 1, Child 0, Infant 0</div>
-                                        <br>
-                                        <div id="demo" class="view-passenger collapse">
-                                            <div class="input-group">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
-                                                            <span class="name">Adult</span>
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
-                                                            </div>
-                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
-                                                            <span class="name">Child</span>
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
-                                                            </div>
-                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
-                                                            <span class="name">Adart</span>
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn btn-sm add" id="minus-btn"><i class="fa fa-minus"></i></button>
-                                                            </div>
-                                                            <input type="number" id="qty_input" class="form-control form-control-sm" value="1" min="1">
-                                                            <div class="input-group-prepend">
-                                                                <button class="btn btn-sm add" id="plus-btn"><i class="fa fa-plus"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <div class="input-group mb-1 mr-sm-1  citizen" id="from-to">
+                                        <div class="dropdown" id="input_box">
+                                            <!-- local button -->
+                                            <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" >
+                                                Adult
+                                                <input type="text" id="quantity_1" name="adult_quantity[]" class=" input-number " value="1" min="1" max="9" readonly="readonly">, Child
+                                                <input type="text" id="child_quantity_1" name="child_quantity[]" class=" input-number" value="0" min="1" max="9" readonly="readonly">, Infant
+                                                <input type="text" id="infant_quantity_1" name="infant_quantity[]" class=" input-number" value="0" min="1" max="4" readonly="readonly">
+                                                <input type="hidden" id="total_quantity" name="total_quantity[]" class=" input-number" value="1" min="1" max="9">
+                                                <span class="input-group-btn">
+                                                    <a href="#" class="badge badge-success" id="badges">Citizen</a>
+                                          <!-- <a href="#" class="badge badge-success" id="foregin_badges">Foreginer</a> -->
+                                                </span>
+                                            </button>
+                                            <!-- local button -->
+                                            <div class="dropdown-menu dropdown-menu-large" style="padding:10px;">
+                                               <span class="dropdown-item adult_field" href="#" id="dropdown-item">
+                                                  <label for="" class="pull-left" id="adult">Adult</label>
+                                                  <div class="input-group pull-right">
+                                                     <span class="input-group-btn">
+                                                     <button type="button" class="quantity-left-minus btn btn-default btn-number"  data-type="minus" data-field="">
+                                                     <span class="fa fa-minus text-info"></span>
+                                                     </button>
+                                                     </span>
+                                                     <input type="text" id="quantity" class=" input-number adult_quantity" value="1" min="1" max="9">
+                                                     <span class="input-group-btn">
+                                                     <button type="button" class="quantity-right-plus btn btn-default btn-number" data-type="plus" data-field="">
+                                                     <span class="fa fa-plus text-info"></span>
+                                                     </button>
+                                                     </span>
+                                                  </div>
+                                               </span>
+                                               <br>
+                                               <span class="dropdown-item child_field" href="#" id="dropdown-item">
+                                                  <label for="" class="pull-left" id="adult">Child</label>
+                                                  <div class="input-group pull-right">
+                                                     <span class="input-group-btn">
+                                                     <button type="button" class="child_quantity-left-minus btn btn-default btn-number"  data-type="minus" data-field="">
+                                                     <span class="fa fa-minus text-info"></span>
+                                                     </button>
+                                                     </span>
+                                                     <input type="text" id="child_quantity"  class=" input-number child_quantity" value="0" min="1" max="9">
+                                                     <span class="input-group-btn">
+                                                     <button type="button" class="child_quantity-right-plus btn btn-default btn-number" data-type="plus" data-field="">
+                                                     <span class="fa fa-plus text-info"></span>
+                                                     </button>
+                                                     </span>
+                                                  </div>
+                                               </span>
+                                               <br>
+                                               <span class="dropdown-item" href="#" id="dropdown-item">
+                                                  <label for="" class="pull-left" id="adult">Infant</label>
+                                                  <div class="input-group pull-right">
+                                                     <span class="input-group-btn">
+                                                     <button type="button" class="infant_quantity-left-minus btn btn-default btn-number"  data-type="minus" data-field="">
+                                                     <span class="fa fa-minus text-info"></span>
+                                                     </button>
+                                                     </span>
+                                                     <input type="text" id="infant_quantity"  class=" input-number infant_quantity" value="0" min="1" max="4">
+                                                     <span class="input-group-btn">
+                                                     <button type="button" class="infant_quantity-right-plus btn btn-default btn-number" data-type="plus" data-field="">
+                                                     <span class="fa fa-plus text-info"></span>
+                                                     </button>
+                                                     </span>
+                                                  </div>
+                                               </span>
                                             </div>
+                                            <!-- local quantity -->
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                                 <div class="col-12" style="height:35px;"></div>
@@ -139,18 +181,18 @@
                                     <div class="radio-view">
                                         <div class="form-check-inline">
                                         <label class="form-check-label" for="radio1">
-                                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="citizen" checked>Citizen
+                                            <input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" checked>Citizen
                                         </label>
                                         </div>
                                         <div class="form-check-inline">
                                         <label class="form-check-label" for="radio2">
-                                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="forigenr">Forienger
+                                            <input type="radio" class="form-check-input" id="radio2" name="nationality" value="F">Forienger
                                         </label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group col-4">
-                                <button type="submit" class="btn-search float-right">Search</button>
+                                <button type="submit" class="btn-search float-right" id="onewaysubmit">Search</button>
                                 </div>
                             </form>
                         </div>
@@ -355,6 +397,10 @@
                     </div>
                 </div>
             </div>
+            <?php
+
+                $conn->close();
+            ?>
         </footer>
         <a href="https://www.messenger.com/t/2360944740816813/" class="float" target="_blank">
             <img src="sonicstar/img/messenger.png" alt="messager" />
@@ -367,6 +413,7 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
         <script src="sonicstar/vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="sonicstar/js/main.js"></script>
+        <script src="sonicstar/js/custom.js"></script>
     </body>
 
     </html>
