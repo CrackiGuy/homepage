@@ -25,11 +25,10 @@
         </div>
         <br>
         <div class="container">
-            <!-- Nav tabs -->
             <ul class="nav nav-tabs head" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#fligt">
-                        <i class="fa fa-plane" aria-hidden="true"></i>
+                    <a class="nav-link active" data-toggle="tab" href="#flight">
+                        <i class="fa fa-plane"></i>
                         <span class="d-none d-lg-inline"> Air Ticketing</span></a>
                 </li>
                 <li class="nav-item">
@@ -39,27 +38,25 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#tour">
-                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        <i class="fa fa-flag"></i>
                         <span class="d-none d-lg-inline">Tour Packages</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#visa">
-                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <i class="fa fa-globe"></i>
                         <span class="d-none d-lg-inline">Visa Services</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#hotel">
-                        <i class="fa fa-bed" aria-hidden="true"></i>
+                        <i class="fa fa-bed"></i>
                         <span class="d-none d-lg-inline">Hotel Booking</span></a>
                 </li>
             </ul>
-
-            <!-- Tab panes -->
             <div class="tab-content t-border">
-                <div id="fligt" class="container tab-pane active"><br>
+                <div id="flight" class="container tab-pane active"><br>
                     <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#one">One Way</a>
+                            <a class="nav-link active" data-toggle="tab" href="#one">One Way</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="pill" href="#round">Round Trip</a>
@@ -67,7 +64,7 @@
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div class="tab-pane inner active" id="one">
+                        <div class="inner tab-pane active" id="one">
                             <form class="form-inline" action="http://localhost:8000/search" method="GET">
                                 <input name="flight_count" value="1" id="flight_count" type="hidden">
                                 <input type="hidden" name="page" value="0" >
@@ -86,7 +83,7 @@
                                      ?>
                                     </select>
                                 </div>
-                                <i class="fa fa-exchange d-icon"></i>
+                                <i class="fa fa-long-arrow-right d-icon"></i>
                                 <div class="form-group col-md-12 col-lg-3">
                                     <select class="select2class" id="onearr" name="arrival_location[]">
                                     <option value="origin" selected>Flight To</option>
@@ -109,36 +106,42 @@
                                         <div class="btn btn-light btn-passenger" data-toggle="collapse" 
                                         data-target="#demo">
                                         
-                                        Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" >, 
-                                        Child <input type="number" name="child_quantity[]" id="child_quantity" value="0">, 
-                                        Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" >, 
+                                        Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" readonly>, 
+                                        Child <input type="number" name="child_quantity[]" id="child_quantity" value="0" readonly>, 
+                                        Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" readonly>
                                         <input type="hidden" id="total_quantity" name="total_quantity[]" class=" input-number" value="1" min="1" max="9">
                                     </div>
                                         <br>
                                         <div id="demo" class="view-passenger collapse">
                                             <div class="input-group">
                                                 <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
+                                                    <div class="input-group name-holder">
+                                                        <div class="col-3">
                                                             <span class="name">Adult</span>
+                                                        </div>
+                                                        <div class="col-9">
                                                             <input type='button' value='-' class='minus' field='quantity' />
-                                                            <input type='text' name='quantity' value='0' class='qty' />
+                                                            <input type='text' name='quantity' value='0' class='qty' readonly/>
                                                             <input type='button' value='+' class='plus' field='quantity' />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
+                                                    <div class="input-group name-holder">
+                                                        <div class="col-3">
                                                             <span class="name">Child</span>
+                                                        </div>
+                                                        <div class="col-9">
                                                             <input type='button' value='-' class='child_minus' field='child_quantity' />
-                                                            <input type='text' name='child_quantity' value='0' class='qty' />
+                                                            <input type='text' name='child_quantity' value='0' class='qty' readonly/>
                                                             <input type='button' value='+' class='child_plus' field='child_quantity' />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
+                                                    <div class="input-group name-holder">
+                                                        <div class="col-3">
                                                             <span class="name">infant</span>
+                                                        </div>
+                                                        <div class="col-9">
                                                             <input type='button' value='-' class='infant_minus' field='infant_quantity' />
-                                                            <input type='text' name='infant_quantity' value='0' class='qty' />
+                                                            <input type='text' name='infant_quantity' value='0' class='qty' readonly/>
                                                             <input type='button' value='+' class='infant_plus' field='infant_quantity' />
                                                         </div>
                                                     </div>
@@ -167,7 +170,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane inner fade" id="round">
+                        <div class="inner tab-pane fade" id="round">
                             <form class="form-inline" action="http://localhost:8000/search" method="GET">
                             <input name="flight_count" value="2" id="flight_count" type="hidden">
                             <input name="flight_status" value="roundtrip" type="hidden">
@@ -273,8 +276,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="car">
-                    
+
+                <div id="car" class="container tab-pane fade">
+                    car
+                </div>
+                <div id="tour" class="container tab-pane fade">
+                    tour
+                </div>
+                <div id="visa" class="container tab-pane fade">
+                    visa
+                </div>
+                <div id="hotel" class="container tab-pane fade">
+                    hotel
                 </div>
             </div>
         </div>
