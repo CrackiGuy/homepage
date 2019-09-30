@@ -25,11 +25,10 @@
         </div>
         <br>
         <div class="container">
-            <!-- Nav tabs -->
             <ul class="nav nav-tabs head" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#fligt">
-                        <i class="fa fa-plane" aria-hidden="true"></i>
+                    <a class="nav-link active" data-toggle="tab" href="#flight">
+                        <i class="fa fa-plane"></i>
                         <span class="d-none d-lg-inline"> Air Ticketing</span></a>
                 </li>
                 <li class="nav-item">
@@ -39,27 +38,25 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#tour">
-                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        <i class="fa fa-flag"></i>
                         <span class="d-none d-lg-inline">Tour Packages</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#visa">
-                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <i class="fa fa-globe"></i>
                         <span class="d-none d-lg-inline">Visa Services</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#hotel">
-                        <i class="fa fa-bed" aria-hidden="true"></i>
+                        <i class="fa fa-bed"></i>
                         <span class="d-none d-lg-inline">Hotel Booking</span></a>
                 </li>
             </ul>
-
-            <!-- Tab panes -->
             <div class="tab-content t-border">
-                <div id="fligt" class="container tab-pane active"><br>
+                <div id="flight" class="container tab-pane active"><br>
                     <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#one">One Way</a>
+                            <a class="nav-link active" data-toggle="tab" href="#one">One Way</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="pill" href="#round">Round Trip</a>
@@ -67,7 +64,7 @@
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div class="tab-pane inner active" id="one">
+                        <div class="inner tab-pane active" id="one">
                             <form class="form-inline" action="http://localhost:8000/search" method="GET">
                                 <input name="flight_count" value="1" id="flight_count" type="hidden">
                                 <input type="hidden" name="page" value="0" >
@@ -173,7 +170,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane inner fade" id="round">
+                        <div class="inner tab-pane fade" id="round">
                             <form class="form-inline" action="http://localhost:8000/search" method="GET">
                             <input name="flight_count" value="2" id="flight_count" type="hidden">
                                 <div class="form-group col-md-12 col-lg-3">
@@ -279,8 +276,18 @@
                         </div>
                     </div>
                 </div>
-                <div id="car" class="container tab-pane">
-                    
+
+                <div id="car" class="container tab-pane fade">
+                    car
+                </div>
+                <div id="tour" class="container tab-pane fade">
+                    tour
+                </div>
+                <div id="visa" class="container tab-pane fade">
+                    visa
+                </div>
+                <div id="hotel" class="container tab-pane fade">
+                    hotel
                 </div>
             </div>
         </div>

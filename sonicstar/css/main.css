@@ -66,31 +66,6 @@ body {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-#flight {
-    background-color: #f15d59;
-}
-
-#car {
-    background-color: #eda822;
-    padding: 10px !important;
-}
-
-#transport {
-    background-color: #3ebca5;
-}
-
-#tour {
-    background-color: #2995c1;
-}
-
-#visa {
-    background-color: #ef7227;
-}
-
-#hotel {
-    background-color: #4fb86c;
-}
-
 
 /* Centered text */
 
