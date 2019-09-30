@@ -46,7 +46,7 @@ var startDate = '';
 var endDate = '';
 
 $(function() {
-    $('#departure_date').daterangepicker({
+    $('#round_trip').daterangepicker({
         opens: 'right',
         minDate: moment(),
         locale: {
@@ -74,19 +74,19 @@ $(function() {
         }
     });
 });
-$(document).ready(function() {
-    $('#qty_input').prop('disabled', true);
-    $('#plus-btn').click(function() {
-        $('#qty_input').val(parseInt($('#qty_input').val()) + 1);
-    });
-    $('#minus-btn').click(function() {
-        $('#qty_input').val(parseInt($('#qty_input').val()) - 1);
-        if ($('#qty_input').val() == 0) {
-            $('#qty_input').val(1);
-        }
+// $(document).ready(function() {
+//     $('#qty_input').prop('disabled', true);
+//     $('#plus-btn').click(function() {
+//         $('#qty_input').val(parseInt($('#qty_input').val()) + 1);
+//     });
+//     $('#minus-btn').click(function() {
+//         $('#qty_input').val(parseInt($('#qty_input').val()) - 1);
+//         if ($('#qty_input').val() == 0) {
+//             $('#qty_input').val(1);
+//         }
 
-    });
-});
+//     });
+// });
 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
