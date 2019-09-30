@@ -39,6 +39,7 @@ $(document).ready(function() {
         });
     });
 });
+
 // Tabs
 var tabs = $('.tabs');
 var selector = $('.tabs').find('a').length;
@@ -63,18 +64,31 @@ $(".tabs").on("click", "a", function(e) {
 });
 
 //Datepicker
+var startDate = '';
+var endDate = '';
+
 $(function() {
     $('#round-date').daterangepicker({
-        opens: 'right',
-        minDate: moment(),
-        locale: {
-            format: 'D MMM YYYY'
-        }
-    });
+            opens: 'right',
+            minDate: moment(),
+            showDropdowns: true,
+            showWeekNumbers: true,
+            locale: {
+                format: 'D MMM YYYY'
+            }
+        },
+        function(start, end) {
+            console.log("Callback has been called!");
+            startDate = start.format('D MMMM YYYY');
+            endDate = end.format('D MMMM YYYY');
+            console.log(startDate + " - " + endDate);
+        });
     $('#one-date').daterangepicker({
         singleDatePicker: true,
-        minDate: moment(),
         opens: 'right',
+        minDate: moment(),
+        showDropdowns: true,
+        showWeekNumbers: true,
         locale: {
             format: 'D MMMM YYYY'
         }

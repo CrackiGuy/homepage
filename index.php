@@ -86,7 +86,7 @@
                                      ?>
                                     </select>
                                 </div>
-                                <i class="fa fa-exchange d-icon"></i>
+                                <i class="fa fa-long-arrow-right d-icon"></i>
                                 <div class="form-group col-md-12 col-lg-3">
                                     <select class="select2class" id="onearr" name="arrival_location[]">
                                     <option value="origin" selected>Flight To</option>
@@ -109,36 +109,42 @@
                                         <div class="btn btn-light btn-passenger" data-toggle="collapse" 
                                         data-target="#demo">
                                         
-                                        Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" >, 
-                                        Child <input type="number" name="child_quantity[]" id="child_quantity" value="0">, 
-                                        Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" >, 
+                                        Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" readonly>, 
+                                        Child <input type="number" name="child_quantity[]" id="child_quantity" value="0" readonly>, 
+                                        Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" readonly>
                                         <input type="hidden" id="total_quantity" name="total_quantity[]" class=" input-number" value="1" min="1" max="9">
                                     </div>
                                         <br>
                                         <div id="demo" class="view-passenger collapse">
                                             <div class="input-group">
                                                 <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
+                                                    <div class="input-group name-holder">
+                                                        <div class="col-3">
                                                             <span class="name">Adult</span>
+                                                        </div>
+                                                        <div class="col-9">
                                                             <input type='button' value='-' class='minus' field='quantity' />
-                                                            <input type='text' name='quantity' value='0' class='qty' />
+                                                            <input type='text' name='quantity' value='0' class='qty' readonly/>
                                                             <input type='button' value='+' class='plus' field='quantity' />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
+                                                    <div class="input-group name-holder">
+                                                        <div class="col-3">
                                                             <span class="name">Child</span>
+                                                        </div>
+                                                        <div class="col-9">
                                                             <input type='button' value='-' class='child_minus' field='child_quantity' />
-                                                            <input type='text' name='child_quantity' value='0' class='qty' />
+                                                            <input type='text' name='child_quantity' value='0' class='qty' readonly/>
                                                             <input type='button' value='+' class='child_plus' field='child_quantity' />
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="input-group name-holder">
+                                                    <div class="input-group name-holder">
+                                                        <div class="col-3">
                                                             <span class="name">infant</span>
+                                                        </div>
+                                                        <div class="col-9">
                                                             <input type='button' value='-' class='infant_minus' field='infant_quantity' />
-                                                            <input type='text' name='infant_quantity' value='0' class='qty' />
+                                                            <input type='text' name='infant_quantity' value='0' class='qty' readonly/>
                                                             <input type='button' value='+' class='infant_plus' field='infant_quantity' />
                                                         </div>
                                                     </div>
@@ -273,7 +279,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="car">
+                <div id="car" class="container tab-pane">
                     
                 </div>
             </div>
