@@ -67,7 +67,7 @@ roundtoCity.on("change",function(){
 
     $( document ).ready(function() {
 
-        var total=$("#total_quantity").val();
+        var total=$("#round_total_quantity").val();
         var currentVal=1;
         
         $("#round_adult_plus").click( function(e) {
@@ -154,7 +154,7 @@ roundtoCity.on("change",function(){
             if ( !isNaN(currentVal) && currentVal > 0 ) {
                 // Decrement one
                 $(field).val(currentVal - 1);
-                $("#child_quantity").val(currentVal - 1)
+                $("#round_child_quantity").val(currentVal - 1)
                 total--;
             }
             
