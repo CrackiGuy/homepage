@@ -725,7 +725,7 @@
     .view-passenger button {
         background: #fff;
         color: #888;
-        font-size: 18px;
+        font-size: 14px;
         border: 0;
         border-radius: 0;
         border-bottom: 1px solid #bc2220;
@@ -799,6 +799,10 @@
         -moz-appearance: textfield;
         width: 14px;
         border: 0;
+    }
+    
+    button {
+        cursor: pointer;
     }
     
     button:disabled {
