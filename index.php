@@ -56,7 +56,7 @@
 
             <!-- Tab panes -->
             <div class="tab-content t-border">
-                <div id="home" class="container tab-pane active"><br>
+                <div id="fligt" class="container tab-pane active"><br>
                     <ul class="nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="pill" href="#one">One Way</a>
@@ -284,6 +284,9 @@
                             </form>
                         </div>
                     </div>
+                </div>
+                <div class="car">
+                    
                 </div>
             </div>
         </div>

@@ -66,14 +66,14 @@ $(".tabs").on("click", "a", function(e) {
 $(function() {
     $('#round-date').daterangepicker({
         opens: 'right',
-        minDate: moment().add(1, 'days'),
+        minDate: moment(),
         locale: {
             format: 'D MMM YYYY'
         }
     });
     $('#one-date').daterangepicker({
         singleDatePicker: true,
-        minDate: moment().add(1, 'days'),
+        minDate: moment(),
         opens: 'right',
         locale: {
             format: 'D MMMM YYYY'
