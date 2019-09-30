@@ -56,7 +56,7 @@
 						<div class="row">
 							<div class="input-group name-holder">
 								<div class="col-5">
-									<span class="name">Adult</span>
+									<span class="name"><i class="fa fa-male"></i>Adult</span>
 								</div>
 								<div class="col-7">
 									<button class='minus' field='quantity'><i class="fa fa-minus"></i></button>
@@ -66,7 +66,7 @@
 							</div>
 							<div class="input-group name-holder">
 								<div class="col-5">
-									<span class="name">Child</span>
+									<span class="name"><i class="fa fa-female"></i>Child</span>
 								</div>
 								<div class="col-7">
 									<button class='child_minus' field='child_quantity' ><i class="fa fa-minus"></i></button>
@@ -76,7 +76,7 @@
 							</div>
 							<div class="input-group name-holder">
 								<div class="col-5">
-									<span class="name">infant</span>
+									<span class="name"><i class="fa fa-child"></i>infant</span>
 								</div>
 								<div class="col-7">
 									<button class='infant_minus' field='infant_quantity' ><i class="fa fa-minus"></i></button>
@@ -168,7 +168,7 @@
 							<div class="row">
 									<div class="input-group name-holder">
 										<div class="col-5">
-											<span class="name">Adult</span>
+											<span class="name"><i class="fa fa-male"></i>Adult</span>
 										</div>
 										<div class="col-7">
 											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus"></i></button>
@@ -178,7 +178,7 @@
 									</div>
 									<div class="input-group name-holder">
 										<div class="col-5">
-											<span class="name">Child</span>
+											<span class="name"><i class="fa fa-female"></i>Child</span>
 										</div>
 										<div class="col-7">
 											<button class='round_child_minus' field='round_child_quantity'><i class="fa fa-minus"></i></button>
@@ -188,7 +188,7 @@
 									</div>
 									<div class="input-group name-holder">
 										<div class="col-5">
-											<span class="name">infant</span>
+											<span class="name"><i class="fa fa-child"></i>infant</span>
 										</div>
 										<div class="col-7">
 											<button class='round_infant_minus' field='round_infant_quantity'><i class="fa fa-minus"></i></button>

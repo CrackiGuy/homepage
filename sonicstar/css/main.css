@@ -1,5 +1,5 @@
     *:focus {
-        outline: none;
+        outline: none !important;
     }
     
     body,
@@ -556,7 +556,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 10px 20px;
+        padding: 7px 20px;
         transition: 0.3s;
         font-size: 16px;
     }
@@ -611,6 +611,10 @@
         border-radius: 0;
         border: 0;
         font-size: 14px;
+    }
+    
+    .daterangepicker select.yearselect {
+        width: 45%;
     }
     
     .select2class {
@@ -697,10 +701,11 @@
     
     .passenger {
         position: relative;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        border-bottom: 1px solid #aaa;
     }
     
     .btn-passenger {
+        background: #fff;
         color: #bc2220;
         width: 100%;
     }
@@ -750,7 +755,11 @@
     .name {
         padding: 5px 50px 5px 5px;
         font-size: 15px;
-        display: block;
+        display: flex;
+    }
+    
+    .name i {
+        margin: 2px 8px 0 0;
     }
     
     .view-passenger {
@@ -788,6 +797,10 @@
     
     input[type="number"] {
         -moz-appearance: textfield;
-        width: 25px;
+        width: 14px;
         border: 0;
+    }
+    
+    button:disabled {
+        cursor: not-allowed;
     }
