@@ -92,16 +92,17 @@
 		<div class="col-12" style="height:35px;"></div>
 		<div class="form-group col-9">
 			<div class="radio-view">
+			<div class="form-check-inline">
+				<label class="form-check-label" for="radio2">
+					<input type="radio" class="form-check-input" id="radio2" name="nationality" value="forigenr" checked>Forienger
+				</label>
+				</div>
 				<div class="form-check-inline">
 				<label class="form-check-label" for="radio1">
-					<input type="radio" class="form-check-input" id="radio1" name="nationality" value="citizen" checked>Citizen
+					<input type="radio" class="form-check-input" id="radio1" name="nationality" value="citizen" >Citizen
 				</label>
 				</div>
-				<div class="form-check-inline">
-				<label class="form-check-label" for="radio2">
-					<input type="radio" class="form-check-input" id="radio2" name="nationality" value="forigenr">Forienger
-				</label>
-				</div>
+				
 			</div>
 		</div>
 		<div class="form-group col-4">
@@ -197,16 +198,17 @@
 			<div class="col-12" style="height:35px;"></div>
 			<div class="form-group col-9">
 				<div class="radio-view">
+				<div class="form-check-inline">
+					<label class="form-check-label" for="radio2">
+						<input type="radio" class="form-check-input" id="radio2" name="nationality" value="F" checked>Forienger
+					</label>
+					</div>
 					<div class="form-check-inline">
 					<label class="form-check-label" for="radio1">
-						<input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" checked>Citizen
+						<input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Citizen
 					</label>
 					</div>
-					<div class="form-check-inline">
-					<label class="form-check-label" for="radio2">
-						<input type="radio" class="form-check-input" id="radio2" name="nationality" value="F">Forienger
-					</label>
-					</div>
+					
 				</div>
 			</div>
 			<div class="form-group col-3">
