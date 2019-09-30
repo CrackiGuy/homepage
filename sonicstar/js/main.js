@@ -52,11 +52,11 @@ $(function() {
         locale: {
             format: 'DD MMM YYYY'
         }
-          
-    }).on('apply.daterangepicker', function (e, picker) {
+
+    }).on('apply.daterangepicker', function(e, picker) {
         var startDate = picker.startDate.format('DD MMM YYYY');
         var endDate = picker.endDate.format('DD MMM YYYY');
-      
+
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
         console.log(startDate);
@@ -87,3 +87,17 @@ $(document).ready(function() {
 
     });
 });
+
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" aa", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " aa";
+}
