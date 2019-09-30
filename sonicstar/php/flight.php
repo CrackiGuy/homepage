@@ -4,7 +4,7 @@
 </div>
 
 <div id="one" class="tabcontent" style="display:block">
-  	<form class="form-inline" action="http://localhost:8000/search" method="GET">
+	<form class="form-inline" action="http://localhost:8000/search" method="GET">
 		<input name="flight_count" value="1" id="flight_count" type="hidden">
 		<input type="hidden" name="page" value="0" >
 		<input type="hidden" name="flight_status" value="oneway">
@@ -60,7 +60,7 @@
 								</div>
 								<div class="col-9">
 									<input type='button' value='-' class='minus' field='quantity' />
-									<input type='text' name='quantity' value='0' class='qty' readonly/>
+									<input type='text' name='quantity' value='1' class='qty' readonly/>
 									<input type='button' value='+' class='plus' field='quantity' />
 								</div>
 							</div>
@@ -104,13 +104,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="form-group col-3">
-		<button type="submit" class="btn-search float-right">Search</button>
+		<div class="form-group col-4">
+		<button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
 		</div>
 	</form>
-	</div>
-
-	<div id="round" class="tabcontent">
+</div>
+<div id="round" class="tabcontent">
 	<form class="form-inline" action="http://localhost:8000/search" method="GET">
 		<input name="flight_count" value="2" id="flight_count" type="hidden">
 		<input name="flight_status" value="roundtrip" type="hidden">
@@ -148,45 +147,46 @@
 				<input  type="hidden" id="arr2" required  name="arrival_location[]" >
 			</div>
 			<div class="form-group col-md-12 col-lg-3">
-				<input type="text" name="departure_date[]"  value="" class="form-control " id="departure_date" placeholder="Date">
+				<input type="text" class="form-control " id="round_trip" placeholder="Date">
+				<input type="hidden"  name="departure_date[]" value="" class="form-control" id="departure_date" placeholder="Date">
 				<input type="hidden"  name="departure_date[]" value="" class="form-control" id="return_date" placeholder="Date">
 			</div>
 			<div class="form-group col-md-12 col-lg-2">
 			<div class="passenger">
 					<div class="btn btn-light btn-passenger" data-toggle="collapse" 
-					data-target="#demo">
+					data-target="#roundquantity">
 					
-					Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" >, 
-					Child <input type="number" name="child_quantity[]" id="child_quantity" value="0">, 
-					Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" >
-					<input type="hidden" id="total_quantity" name="total_quantity[]" class=" input-number" value="1" min="1" max="9">
+					Adult <input type="number" name="adult_quantity[]" id="round_adult_quantity" value="1" readonly>, 
+					Child <input type="number" name="child_quantity[]" id="round_child_quantity" value="0" readonly>, 
+					Infant <input type="number" name="infant_quantity[]" id="round_infant_quantity" value="0" readonly>
+					<input type="hidden" id="total_quantity" name="total_quantity[]" class="input-number" value="1" min="1" max="9">
 				</div>
 					<br>
-					<div id="demo" class="view-passenger collapse">
+					<div id="roundquantity" class="view-passenger collapse">
 						<div class="input-group">
 							<div class="row">
 								<div class="col-12">
 									<div class="input-group name-holder">
 										<span class="name">Adult</span>
-										<input type='button' value='-' class='minus' field='quantity' />
-										<input type='text' name='quantity' value='0' class='qty' />
-										<input type='button' value='+' class='plus' field='quantity' />
+										<input type='button' value='-' id='round_adult_minus' field='round_quantity' />
+										<input type='text' name='round_quantity' value='1' class='qty' readonly />
+										<input type='button' value='+' id='round_adult_plus' field='round_quantity' />
 									</div>
 								</div>
 								<div class="col-12">
 									<div class="input-group name-holder">
 										<span class="name">Child</span>
-										<input type='button' value='-' class='child_minus' field='child_quantity' />
-										<input type='text' name='child_quantity' value='0' class='qty' />
-										<input type='button' value='+' class='child_plus' field='child_quantity' />
+										<input type='button' value='-' class='round_child_minus' field='round_child_quantity' />
+										<input type='text' name='round_child_quantity' value='0' class='qty' readonly />
+										<input type='button' value='+' class='round_child_plus' field='round_child_quantity' />
 									</div>
 								</div>
 								<div class="col-12">
 									<div class="input-group name-holder">
 										<span class="name">infant</span>
-										<input type='button' value='-' class='infant_minus' field='infant_quantity' />
-										<input type='text' name='infant_quantity' value='0' class='qty' />
-										<input type='button' value='+' class='infant_plus' field='infant_quantity' />
+										<input type='button' value='-' class='round_infant_minus' field='round_infant_quantity' />
+										<input type='text' name='round_infant_quantity' value='0' class='qty' readonly />
+										<input type='button' value='+' class='round_infant_plus' field='round_infant_quantity' />
 									</div>
 								</div>
 							</div>
@@ -210,8 +210,8 @@
 				</div>
 			</div>
 			<div class="form-group col-3">
-			<button type="submit" class="btn-search float-right">Search</button>
+			<button type="submit" id="round_submit" class="btn-search float-right">Search</button>
 			</div>
-		</form>
+	</form>
 </div>
         

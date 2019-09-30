@@ -3,14 +3,14 @@ var toCity = $("#onearr");
 var submit = $("#onewaysubmit");
 
 
-// $( document ).ready(function() {
+$( document ).ready(function() {
 
-//     toCity.attr("disabled", true);
-//     // submit.attr("disabled",true);
+    toCity.attr("disabled", true);
+    // submit.attr("disabled",true);
 
-//     firstcondition();
+    firstcondition();
 
-// });
+});
 
 fromCity.on("change", function() {
 
