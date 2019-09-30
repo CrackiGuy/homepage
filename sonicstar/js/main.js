@@ -64,13 +64,23 @@ $(".tabs").on("click", "a", function(e) {
 
 //Datepicker
 $(function() {
-    $('#round-date').daterangepicker({
+    $('#departure_date').daterangepicker({
         opens: 'right',
         minDate: moment(),
         locale: {
-            format: 'D MMM YYYY'
+            format: 'DD MMM YYYY'
         }
+          
+    }).on('apply.daterangepicker', function (e, picker) {
+        var startDate = picker.startDate.format('DD MMM YYYY');
+        var endDate = picker.endDate.format('DD MMM YYYY');
+      
+        $("#departure_date").val(startDate);
+        $("#return_date").val(endDate);
+        console.log(startDate);
+        console.log(endDate);
     });
+    // $('#departure_date').daterangepicker()
     $('#one-date').daterangepicker({
         singleDatePicker: true,
         minDate: moment(),
