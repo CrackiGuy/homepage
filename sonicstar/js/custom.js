@@ -16,13 +16,15 @@ fromCity.on("change", function() {
 
     toCity.attr("disabled", false);
     firstcondition();
-
+    let $boxarr = $("#onearr").val();
     let $boxval = $("#onedept").val();
 
     if ($boxval === "origin") {
 
+        $('#onearr option:eq(0)').prop('selected', true).trigger('change');
 
-
+    }else if($boxarr===$boxval){
+        $('#onearr option:eq(0)').prop('selected', true).trigger('change');
     } else {
 
         $("#onearr > option").each(function(ind) {
@@ -32,6 +34,7 @@ fromCity.on("change", function() {
         });
     }
 
+    
 
 
 
@@ -45,15 +48,15 @@ toCity.on("change", function() {
     if ($boxval === "origin") {
 
 
-        $('#onedept option:eq(0)').prop('selected', true).trigger('change');
+        
 
 
     } else {
-        $("#onedept > option").each(function(ind) {
-            let ele = $("#onedept > option").eq(ind);
-            if (ele.val() === $boxval) ele.attr("disabled", "disabled");
-            else ele.removeAttr("disabled");
-        });
+        // $("#onedept > option").each(function(ind) {
+        //     let ele = $("#onedept > option").eq(ind);
+        //     if (ele.val() === $boxval) ele.attr("disabled", "disabled");
+        //     else ele.removeAttr("disabled");
+        // });
     }
 
 
