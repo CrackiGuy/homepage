@@ -55,33 +55,33 @@
 					<div class="input-group">
 						<div class="row">
 							<div class="input-group name-holder">
-								<div class="col-3">
+								<div class="col-5">
 									<span class="name">Adult</span>
 								</div>
-								<div class="col-9">
-									<input type='button' value='-' class='minus' field='quantity' />
+								<div class="col-7">
+									<button class='minus' field='quantity'><i class="fa fa-minus"></i></button>
 									<input type='text' name='quantity' value='1' class='qty' readonly/>
-									<input type='button' value='+' class='plus' field='quantity' />
+									<button class='plus' field='quantity' ><i class="fa fa-plus"></i></button>
 								</div>
 							</div>
 							<div class="input-group name-holder">
-								<div class="col-3">
+								<div class="col-5">
 									<span class="name">Child</span>
 								</div>
-								<div class="col-9">
-									<input type='button' value='-' class='child_minus' field='child_quantity' />
+								<div class="col-7">
+									<button class='child_minus' field='child_quantity' ><i class="fa fa-minus"></i></button>
 									<input type='text' name='child_quantity' value='0' class='qty' readonly/>
-									<input type='button' value='+' class='child_plus' field='child_quantity' />
+									<button class='child_plus' field='child_quantity' ><i class="fa fa-plus"></i></button>
 								</div>
 							</div>
 							<div class="input-group name-holder">
-								<div class="col-3">
+								<div class="col-5">
 									<span class="name">infant</span>
 								</div>
-								<div class="col-9">
-									<input type='button' value='-' class='infant_minus' field='infant_quantity' />
+								<div class="col-7">
+									<button class='infant_minus' field='infant_quantity' ><i class="fa fa-minus"></i></button>
 									<input type='text' name='infant_quantity' value='0' class='qty' readonly/>
-									<input type='button' value='+' class='infant_plus' field='infant_quantity' />
+									<button class='infant_plus' field='infant_quantity' ><i class="fa fa-plus"></i></button>
 								</div>
 							</div>
 						</div>
@@ -104,7 +104,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="form-group col-4">
+		<div class="form-group col-3">
 		<button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
 		</div>
 	</form>
@@ -165,30 +165,36 @@
 					<div id="roundquantity" class="view-passenger collapse">
 						<div class="input-group">
 							<div class="row">
-								<div class="col-12">
 									<div class="input-group name-holder">
-										<span class="name">Adult</span>
-										<input type='button' value='-' id='round_adult_minus' field='round_quantity' />
-										<input type='text' name='round_quantity' value='1' class='qty' readonly />
-										<input type='button' value='+' id='round_adult_plus' field='round_quantity' />
+										<div class="col-5">
+											<span class="name">Adult</span>
+										</div>
+										<div class="col-7">
+											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus"></i></button>
+											<input type='text' name='round_quantity' value='1' class='qty' readonly />
+											<button id='round_adult_plus' field='round_quantity'><i class="fa fa-plus"></i></button>
+										</div>
 									</div>
-								</div>
-								<div class="col-12">
 									<div class="input-group name-holder">
-										<span class="name">Child</span>
-										<input type='button' value='-' class='round_child_minus' field='round_child_quantity' />
-										<input type='text' name='round_child_quantity' value='0' class='qty' readonly />
-										<input type='button' value='+' class='round_child_plus' field='round_child_quantity' />
+										<div class="col-5">
+											<span class="name">Child</span>
+										</div>
+										<div class="col-7">
+											<button class='round_child_minus' field='round_child_quantity'><i class="fa fa-minus"></i></button>
+											<input type='text' name='round_child_quantity' value='0' class='qty' readonly />
+											<button class='round_child_plus' field='round_child_quantity'><i class="fa fa-plus"></i></button>
+										</div>
 									</div>
-								</div>
-								<div class="col-12">
 									<div class="input-group name-holder">
-										<span class="name">infant</span>
-										<input type='button' value='-' class='round_infant_minus' field='round_infant_quantity' />
+										<div class="col-5">
+											<span class="name">infant</span>
+										</div>
+										<div class="col-7">
+											<button class='round_infant_minus' field='round_infant_quantity'><i class="fa fa-minus"></i></button>
 										<input type='text' name='round_infant_quantity' value='0' class='qty' readonly />
-										<input type='button' value='+' class='round_infant_plus' field='round_infant_quantity' />
+										<button class='round_infant_plus' field='round_infant_quantity'><i class="fa fa-plus"></i></button>
+										</div>
 									</div>
-								</div>
 							</div>
 						</div>
 					</div>
