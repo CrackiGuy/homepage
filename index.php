@@ -151,7 +151,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12" style="height:35px;"></div>
-                                <div class="form-group col-8">
+                                <div class="form-group col-9">
                                     <div class="radio-view">
                                         <div class="form-check-inline">
                                         <label class="form-check-label" for="radio1">
@@ -219,7 +219,7 @@
                                         
                                         Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" >, 
                                         Child <input type="number" name="child_quantity[]" id="child_quantity" value="0">, 
-                                        Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" >, 
+                                        Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" >
                                         <input type="hidden" id="total_quantity" name="total_quantity[]" class=" input-number" value="1" min="1" max="9">
                                     </div>
                                         <br>
@@ -256,7 +256,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12" style="height:35px;"></div>
-                                <div class="form-group col-8">
+                                <div class="form-group col-9">
                                     <div class="radio-view">
                                         <div class="form-check-inline">
                                         <label class="form-check-label" for="radio1">
@@ -270,7 +270,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group col-4">
+                                <div class="form-group col-3">
                                 <button type="submit" class="btn-search float-right">Search</button>
                                 </div>
                             </form>

@@ -672,7 +672,7 @@ footer {
 }
 
 #one-date,
-#round-date,
+#departure_date,
 .btn {
     border-radius: 0;
     border: 0;
@@ -746,7 +746,7 @@ footer {
 }
 
 #one-date,
-#round-date {
+#departure_date {
     display: block;
     border-bottom: 1px solid #aaa;
     width: 100%;
@@ -905,7 +905,4 @@ input[type="number"] {
     -moz-appearance: textfield;
     width: 25px;
     border: 0;
-}
-#onewaysubmit {
-    z
 }
