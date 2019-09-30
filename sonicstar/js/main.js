@@ -87,6 +87,11 @@ $(document).ready(function() {
 
     });
 });
+$(document).click(function(e) {
+    if (!$(e.target).is('.panel-body')) {
+        $('.collapse').collapse('hide');
+    }
+});
 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;

@@ -22,7 +22,7 @@
 				?>
 			</select>
 		</div>
-		<i class="fa fa-long-arrow-right d-icon"></i>
+		<i class="fa fa-long-arrow-right d-none d-lg-block"></i>
 		<div class="form-group col-md-12 col-lg-3">
 			<select class="select2class" id="onearr" name="arrival_location[]">
 			<option value="origin" selected>Flight To</option>
@@ -131,7 +131,7 @@
 				</select>
 				<input type="hidden" id="dep2" required name="departure_location[]">
 			</div>
-			<i class="fa fa-exchange d-icon"></i>
+			<i class="fa fa-exchange d-none d-lg-block"></i>
 			<div class="form-group col-md-12 col-lg-3">
 				<select class="select2class locations0" id="round_arrival_location" name="arrival_location[]" required>
 				<option value="origin" selected>Flight To</option>
