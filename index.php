@@ -121,7 +121,7 @@
                                                         </div>
                                                         <div class="col-9">
                                                             <input type='button' value='-' class='minus' field='quantity' />
-                                                            <input type='text' name='quantity' value='0' class='qty' readonly/>
+                                                            <input type='text' name='quantity' value='1' class='qty' readonly/>
                                                             <input type='button' value='+' class='plus' field='quantity' />
                                                         </div>
                                                     </div>
@@ -166,7 +166,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-4">
-                                <button type="submit" class="btn-search float-right">Search</button>
+                                <button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
                                 </div>
                             </form>
                         </div>
@@ -208,7 +208,8 @@
                                     <input  type="hidden" id="arr2" required  name="arrival_location[]" >
                                 </div>
                                 <div class="form-group col-md-12 col-lg-3">
-                                    <input type="text" name="departure_date[]"  value="" class="form-control " id="departure_date" placeholder="Date">
+                                    <input type="text" class="form-control " id="round_trip" placeholder="Date">
+                                    <input type="hidden"  name="departure_date[]" value="" class="form-control" id="departure_date" placeholder="Date">
                                     <input type="hidden"  name="departure_date[]" value="" class="form-control" id="return_date" placeholder="Date">
                                 </div>
                                 <div class="form-group col-md-12 col-lg-2">
@@ -228,25 +229,25 @@
                                                     <div class="col-12">
                                                         <div class="input-group name-holder">
                                                             <span class="name">Adult</span>
-                                                            <input type='button' value='-' class='minus' field='quantity' />
-                                                            <input type='text' name='quantity' value='0' class='qty' />
-                                                            <input type='button' value='+' class='plus' field='quantity' />
+                                                            <input type='button' value='-' class='minus' field='round_quantity' />
+                                                            <input type='text' name='round_quantity' value='1' class='qty' />
+                                                            <input type='button' value='+' class='plus' field='round_quantity' />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="input-group name-holder">
                                                             <span class="name">Child</span>
-                                                            <input type='button' value='-' class='child_minus' field='child_quantity' />
-                                                            <input type='text' name='child_quantity' value='0' class='qty' />
-                                                            <input type='button' value='+' class='child_plus' field='child_quantity' />
+                                                            <input type='button' value='-' class='child_minus' field='round_child_quantity' />
+                                                            <input type='text' name='round_child_quantity' value='0' class='qty' />
+                                                            <input type='button' value='+' class='child_plus' field='round_child_quantity' />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="input-group name-holder">
                                                             <span class="name">infant</span>
-                                                            <input type='button' value='-' class='infant_minus' field='infant_quantity' />
-                                                            <input type='text' name='infant_quantity' value='0' class='qty' />
-                                                            <input type='button' value='+' class='infant_plus' field='infant_quantity' />
+                                                            <input type='button' value='-' class='infant_minus' field='round_infant_quantity' />
+                                                            <input type='text' name='round_infant_quantity' value='0' class='qty' />
+                                                            <input type='button' value='+' class='infant_plus' field='round_infant_quantity' />
                                                         </div>
                                                     </div>
                                                 </div>
