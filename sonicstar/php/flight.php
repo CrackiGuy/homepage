@@ -44,7 +44,7 @@
 								</div>
 								<div class="col-7 ggwp">
 									<button class='minus ggwp' field='quantity'><i class="fa fa-minus ggwp"></i></button>
-									<input type='text' name='quantity' value='1' class='qty_adult ggwp' readonly/>
+									<input type='number' name='quantity' value='1' class='qty_adult ggwp' readonly/>
 									<button class='plus ggwp' field='quantity' ><i class="fa fa-plus ggwp"></i></button>
 								</div>
 							</div>
@@ -138,7 +138,7 @@
 										</div>
 										<div class="col-7 ggwp">
 											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus ggwp"></i></button>
-											<input type='text' name='round_quantity' value='1' class='qty_adult ggwp' readonly />
+											<input type='number' name='round_quantity' value='1' class='qty_adult ggwp' readonly />
 											<button id='round_adult_plus' field='round_quantity'><i class="fa fa-plus ggwp"></i></button>
 										</div>
 									</div>
