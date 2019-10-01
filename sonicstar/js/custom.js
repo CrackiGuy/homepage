@@ -1,63 +1,92 @@
-var fromCity = $("#onedept");
-var toCity = $("#onearr");
+var fromCity = $("#box1");
+var toCity = $("#box2");
 var submit = $("#onewaysubmit");
 
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
-    toCity.attr("disabled", true);
+    // console.log(fromCity.val());
     // submit.attr("disabled",true);
 
-    firstcondition();
+   
+    var flightto="";
+     flightto+="<option value='origin'>Flight To</option>";
 
-});
-
-fromCity.on("change", function() {
-
-    toCity.attr("disabled", false);
-    firstcondition();
-    let $boxarr = $("#onearr").val();
-    let $boxval = $("#onedept").val();
-
-    if ($boxval === "origin") {
-
-        $('#onearr option:eq(0)').prop('selected', true).trigger('change');
-
-    }else if($boxarr===$boxval){
-        $('#onearr option:eq(0)').prop('selected', true).trigger('change');
-    } else {
-
-        $("#onearr > option").each(function(ind) {
-            let ele = $("#onearr > option").eq(ind);
-            if (ele.val() === $boxval) ele.attr("disabled", "disabled");
-            else ele.removeAttr("disabled");
-        });
-    }
-
+     var flightfrom="";
+     flightfrom+="<option value='origin'>Flight From</option>";
+    $.getJSON("sonicstar/php/json.php",function(data){
     
-
-
+        $.each(data,function(index,item) 
+        {
+            flightto+="<option value='"+item.name+"'>"+item.name+"</option>";
+            flightfrom+="<option value='"+item.name+"'>"+item.name+"</option>";
+        });
+        $("#box1").html(flightfrom); 
+        $("#box2").html(flightto);
+    
+    });
+    
+    toCity.attr("disabled", true);
+    firstcondition();
 
 
 });
+
+// fromCity.on("change", function() {
+
+//     toCity.attr("disabled", false);
+//     firstcondition();
+//     let $boxarr = $("#onearr").val();
+//     let $boxval = $("#onedept").val();
+
+//     if ($boxval === "origin") {
+
+//         $('#onearr option:eq(0)').prop('selected', true).trigger('change');
+
+//         } else {
+          
+//             var arr  = $("#onedept").find(':selected');
+//             console.log(arr.val());
+//             $("#onearr").find('option').show();
+//             $.each($("#onearr"), function(){  
+               
+//             var self = this;
+//             var selectVal = $(this).val();
+//             $.each(arr, function(){  
+                		
+//                 if (selectVal !== $(this).val()){
+                   
+// 					$(self).find('option[value="'+$(this).val()+'"]').hide();
+//                 } else {
+//                     $('#onearr option:eq(0)').prop('selected', true).trigger('change');
+//                     $(self).find('option[value="'+$(this).val()+'"]').hide();
+//                 }
+//             });
+//         });
+    
+//     }
+        
+// });
 
 toCity.on("change", function() {
-    let $boxval = $("#onearr").val();
+    // let $boxval = $("#box2").val();
+
     firstcondition();
 
-    if ($boxval === "origin") {
+    console.log($('#box2').val());
+    // if ($boxval === "origin") {
 
 
-        
+       
 
 
-    } else {
-        // $("#onedept > option").each(function(ind) {
-        //     let ele = $("#onedept > option").eq(ind);
-        //     if (ele.val() === $boxval) ele.attr("disabled", "disabled");
-        //     else ele.removeAttr("disabled");
-        // });
-    }
+    // } else {
+    //     // $("#onedept > option").each(function(ind) {
+    //     //     let ele = $("#onedept > option").eq(ind);
+    //     //     if (ele.val() === $boxval) ele.attr("disabled", "disabled");
+    //     //     else ele.removeAttr("disabled");
+    //     // });
+    // }
 
 
 });
@@ -67,7 +96,7 @@ $(document).ready(function() {
 
     var total = $("#total_quantity").val();
     var currentVal = 1;
-
+    toCity.attr("disabled", true);
     $(".plus").click(function(e) {
 
         e.preventDefault();
@@ -209,10 +238,11 @@ $(document).ready(function() {
 function firstcondition() {
 
 
-    var from_original = $("#onedept").val();
-    var to_original = $("#onearr").val();
+    var from_original = $("#box1").val();
+    var to_original = $("#box2").val();
 
-    if (from_original == "origin" || to_original == "origin") {
+    
+    if (from_original == "origin" || to_original == "origin" || from_original == null || to_original == null) {
 
         submit.attr("disabled", true);
 
@@ -221,3 +251,40 @@ function firstcondition() {
     }
 
 }
+
+function checkTheDropdowns(){
+   
+
+    toCity.attr("disabled", false);
+   
+      
+         var items="";
+         items+="<option value='origin'>Flight To</option>";
+         $.getJSON("sonicstar/php/json.php",function(data){
+         
+             $.each(data,function(index,item) 
+             {
+                 if ($('#box1').val()==item.name) {
+                   
+                    console.log($('#box1').val());
+                    console.log($('#box2').val());
+                    submit.attr("disabled", true);
+                   
+                 }else{
+                     items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                 }
+           
+          
+                 
+             });
+
+             $("#box2").html(items); 
+         
+         });
+     
+        
+  };
+  checkTheDropdowns();
+  $('#box1').on('change', checkTheDropdowns);
+
+

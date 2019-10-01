@@ -48,7 +48,9 @@ var endDate = '';
 $(function() {
     $('#round_trip').daterangepicker({
         opens: 'right',
-        minDate: moment(),
+        minDate: moment().add('days', 1),
+        startDate: moment().add('days', 1),
+        endDate: moment().add('days', 1),
         locale: {
             format: 'DD MMM YYYY'
         }
@@ -66,7 +68,7 @@ $(function() {
     $('#one-date').daterangepicker({
         singleDatePicker: true,
         opens: 'right',
-        minDate: moment(),
+        minDate: moment().add('days', 1),
         showDropdowns: true,
         showWeekNumbers: true,
         locale: {

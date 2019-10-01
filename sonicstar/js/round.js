@@ -6,9 +6,31 @@ var dep2=$("#dep2");
 var arr=$("#arr2");
 $( document ).ready(function() {
 
-    roundtoCity.attr("disabled", true);
+
     // submit.attr("disabled",true);
-    roundcondition();
+    var roundflightto="";
+    roundflightto+="<option value='origin'>Flight To</option>";
+
+    var roundflightfrom="";
+    roundflightfrom+="<option value='origin'>Flight From</option>";
+   $.getJSON("sonicstar/php/json.php",function(data){
+   
+       $.each(data,function(index,item) 
+       {
+        roundflightto+="<option value='"+item.name+"'>"+item.name+"</option>";
+        roundflightfrom+="<option value='"+item.name+"'>"+item.name+"</option>";
+       });
+       $("#round_departure_location").html(roundflightfrom); 
+       $("#round_arrival_location").html(roundflightto);
+   
+   });
+   
+   var today = moment().add('days', 1).format('DD MMM, YYYY');
+   $("#departure_date").val(today);
+   $("#return_date").val(today);
+   roundtoCity.attr("disabled", true);
+   round_submit.attr("disabled", true);   
+ 
 
 });
 
@@ -17,21 +39,29 @@ roundfromCity.on("change",function(){
     roundtoCity.attr("disabled", false);
     roundcondition();
 
-    let $boxval = $("#round_departure_location").val();
+    var items="";
+    items+="<option value='origin'>Flight To</option>";
+    $.getJSON("sonicstar/php/json.php",function(data){
+    
+        $.each(data,function(index,item) 
+        {
+            if ($('#round_departure_location').val()==item.name) {
+              
+               console.log($('#round_departure_location').val());
+               console.log($('#round_arrival_location').val());
+               submit.attr("disabled", true);
+              
+            }else{
+                items+="<option value='"+item.name+"'>"+item.name+"</option>";
+            }
+      
+     
+            
+        });
 
-    if ($boxval==="origin") {
-
-        // toCity.attr("disabled", true);
-        // $('#onearr option:eq(0)').prop('selected', true).trigger('change');
-
-    } else {
-
-        $("#round_arrival_location > option").each(function(ind) {
-            let ele = $("#round_arrival_location > option").eq(ind);
-            if (ele.val() === $boxval) ele.attr("disabled", "disabled");
-            else ele.removeAttr("disabled");
-          });
-    }
+        $("#round_arrival_location").html(items); 
+    
+    });
 
     var departure = $( "#round_departure_location" ).val();
     arr.val(departure);
@@ -41,22 +71,22 @@ roundfromCity.on("change",function(){
 });
 
 roundtoCity.on("change",function(){
-        let $boxval = $("#round_arrival_location").val();
+        // let $boxval = $("#round_arrival_location").val();
         roundcondition();
 
-        if ($boxval === "origin") {
+        // if ($boxval === "origin") {
             
         
-            $('#round_departure_location option:eq(0)').prop('selected', true).trigger('change');
+        //     $('#round_departure_location option:eq(0)').prop('selected', true).trigger('change');
 
            
-        } else {
-            $("#round_departure_location > option").each(function(ind) {
-                let ele = $("#round_departure_location > option").eq(ind);
-                if (ele.val() === $boxval) ele.attr("disabled", "disabled");
-                else ele.removeAttr("disabled");
-             });
-        }
+        // } else {
+        //     $("#round_departure_location > option").each(function(ind) {
+        //         let ele = $("#round_departure_location > option").eq(ind);
+        //         if (ele.val() === $boxval) ele.attr("disabled", "disabled");
+        //         else ele.removeAttr("disabled");
+        //      });
+        // }
         var arrvie = $( "#round_arrival_location" ).val();
     
         dep2.val(arrvie);
@@ -212,10 +242,10 @@ roundtoCity.on("change",function(){
 
         var roundfromCity = $("#round_departure_location").val();
         var roundtoCity = $("#round_arrival_location").val();
-     
     
         if (roundfromCity=="origin" || roundtoCity=="origin") {
     
+            console.log("s");
             round_submit.attr("disabled", true);
           
         }else{

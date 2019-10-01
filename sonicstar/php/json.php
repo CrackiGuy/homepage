@@ -1,3 +1,4 @@
+
 <?php
     $servername = "localhost";
     $database="sonicstar_db";
@@ -14,13 +15,18 @@
     die("Connection failed: " . mysqli_connect_error());
     }
 
-    $cr_articles = "SELECT * from cr_articles WHERE cat_id = 48 AND status = 1 LIMIT 8";
-    $result = mysqli_query($conn, $cr_articles);
-
+    
     $mysql="SELECT * from short_codes";
     $city1=mysqli_query($conn,$mysql);
-    $city2=mysqli_query($conn,$mysql);
-    $city3=mysqli_query($conn,$mysql);
-    $city4=mysqli_query($conn,$mysql);
+    $data = array();
 
+  	        if ($city1->num_rows > 0) {
+														
+						while($row = $city1->fetch_assoc()) {
+                            $data[] = $row; 
+						}
+					}  
+    echo json_encode($data);
+   
+   
 ?>

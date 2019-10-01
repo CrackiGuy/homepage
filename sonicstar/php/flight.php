@@ -9,32 +9,16 @@
 		<input type="hidden" name="page" value="0" >
 		<input type="hidden" name="flight_status" value="oneway">
 		<div class="form-group col-md-12 col-lg-3">
-			<select class="select2class" id="onedept" name="departure_location[]">
-				<option value="origin" >Flight From</option>
-				<?php
-					if ($city1->num_rows > 0) {
-														
-						while($row = $city1->fetch_assoc()) {
-						// var_dump($row["name"]);
-						echo "<option>".$row["name"]."</option>";
-						}
-					}  
-				?>
+			<select class="select2class" id="box1" name="departure_location[]">
+			
+				
 			</select>
 		</div>
 		<i class="fa fa-long-arrow-right d-icon"></i>
 		<div class="form-group col-md-12 col-lg-3">
-			<select class="select2class" id="onearr" name="arrival_location[]">
-			<option value="origin" selected>Flight To</option>
-			<?php
-					if ($city2->num_rows > 0) {
-														
-						while($row = $city2->fetch_assoc()) {
-						// var_dump($row["name"]);
-						echo "<option>".$row["name"]."</option>";
-						}
-					}  
-				?>
+			<select class="select2class" id="box2" name="arrival_location[]">
+		
+			<!--  -->
 			</select>
 		</div>
 		<div class="form-group col-md-12 col-lg-3">
@@ -118,37 +102,19 @@
 			<div class="form-group col-md-12 col-lg-3">
 
 				<select class="select2class locations0" id="round_departure_location" name="departure_location[]" required>
-				<option value="origin" selected>Flight From</option>
-				<?php
-						if ($city3->num_rows > 0) {
-															
-							while($row = $city3->fetch_assoc()) {
-							// var_dump($row["name"]);
-							echo "<option>".$row["name"]."</option>";
-							}
-						}  
-					?>
+				
 				</select>
 				<input type="hidden" id="dep2" required name="departure_location[]">
 			</div>
 			<i class="fa fa-exchange d-icon"></i>
 			<div class="form-group col-md-12 col-lg-3">
 				<select class="select2class locations0" id="round_arrival_location" name="arrival_location[]" required>
-				<option value="origin" selected>Flight To</option>
-				<?php
-						if ($city4->num_rows > 0) {
-															
-							while($row = $city4->fetch_assoc()) {
-							// var_dump($row["name"]);
-							echo "<option>".$row["name"]."</option>";
-							}
-						}  
-					?>
+				
 				</select>
 				<input  type="hidden" id="arr2" required  name="arrival_location[]" >
 			</div>
 			<div class="form-group col-md-12 col-lg-3">
-				<input type="text" class="form-control " id="round_trip" placeholder="Date">
+				<input type="text" class="form-control" id="round_trip" placeholder="Date" required>
 				<input type="hidden"  name="departure_date[]" value="" class="form-control" id="departure_date" placeholder="Date">
 				<input type="hidden"  name="departure_date[]" value="" class="form-control" id="return_date" placeholder="Date">
 			</div>

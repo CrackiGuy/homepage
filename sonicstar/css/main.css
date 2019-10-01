@@ -616,7 +616,11 @@
     .select2class {
         display: block;
     }
-    
+
+    /* .select2classes {
+        display: block;
+    }
+     */
     .select2 .selection .select2-selection--single,
     .select2-container--default .select2-search--dropdown .select2-search__field {
         border-width: 0 0 1px 0 !important;
