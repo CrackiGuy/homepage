@@ -49,10 +49,17 @@ roundfromCity.on("change",function(){
               
                console.log($('#round_departure_location').val());
                console.log($('#round_arrival_location').val());
-               submit.attr("disabled", true);
+               round_submit.attr("disabled", true);
               
             }else{
-                items+="<option value='"+item.name+"'>"+item.name+"</option>";
+
+                if ($('#round_departure_location').val()=="origin") {
+                    items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                    round_submit.attr("disabled", true);
+                } else {
+                    items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                }
+               
             }
       
      
