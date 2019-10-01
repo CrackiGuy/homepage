@@ -44,7 +44,7 @@
 								</div>
 								<div class="col-7">
 									<button class='minus' field='quantity'><i class="fa fa-minus"></i></button>
-									<input type='text' name='quantity' value='1' class='qty' readonly/>
+									<input type='number' name='quantity' value='1' id="adult" class='qty_adult' readonly/>
 									<button class='plus' field='quantity' ><i class="fa fa-plus"></i></button>
 								</div>
 							</div>
@@ -54,7 +54,7 @@
 								</div>
 								<div class="col-7">
 									<button class='child_minus' field='child_quantity' ><i class="fa fa-minus"></i></button>
-									<input type='text' name='child_quantity' value='0' class='qty' readonly/>
+									<input type='number' name='child_quantity' value='0' id="child" class='qty' readonly/>
 									<button class='child_plus' field='child_quantity' ><i class="fa fa-plus"></i></button>
 								</div>
 							</div>
@@ -64,7 +64,7 @@
 								</div>
 								<div class="col-7">
 									<button class='infant_minus' field='infant_quantity' ><i class="fa fa-minus"></i></button>
-									<input type='text' name='infant_quantity' value='0' class='qty' readonly/>
+									<input type='number' name='infant_quantity' value='0' class='qty' readonly/>
 									<button class='infant_plus' field='infant_quantity' ><i class="fa fa-plus"></i></button>
 								</div>
 							</div>
@@ -138,7 +138,7 @@
 										</div>
 										<div class="col-7">
 											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus"></i></button>
-											<input type='text' name='round_quantity' value='1' class='qty' readonly />
+											<input type='text' name='round_quantity' value='1' class='qty_adult' readonly />
 											<button id='round_adult_plus' field='round_quantity'><i class="fa fa-plus"></i></button>
 										</div>
 									</div>

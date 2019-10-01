@@ -7,8 +7,18 @@ $(document).ready(function() {
 
     // console.log(fromCity.val());
     // submit.attr("disabled",true);
+  
+    $("#adult_quantity").val(1);
+    $("#child_quantity").val(0);
+    $("#infant_quantity").val(0);
+    $("#total_quantity").val(1)
 
-   
+    $(".qty").val(0);
+    
+    $(".qty_adult").val(1);
+ 
+
+
     var flightto="";
      flightto+="<option value='origin'>Flight To</option>";
 

@@ -32,17 +32,17 @@
                         <span class="d-none d-lg-inline"> Air Ticketing</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#car">
+                    <a class="nav-link" href="https://www.sonicstartravel.com/car_rental/">
                         <i class="fa fa-car" aria-hidden="true"></i>
                         <span class="d-none d-lg-inline">Car Rental</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#tour">
+                    <a class="nav-link" href="https://www.sonicstartravel.com/car_rental/attractive-places">
                         <i class="fa fa-flag"></i>
                         <span class="d-none d-lg-inline">Tour Packages</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#visa">
+                    <a class="nav-link" data-toggle="tab" href="https://www.sonicstartravel.com/flight/public/visa">
                         <i class="fa fa-globe"></i>
                         <span class="d-none d-lg-inline">Visa Services</span></a>
                 </li>
