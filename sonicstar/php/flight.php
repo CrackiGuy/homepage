@@ -78,12 +78,12 @@
 			<div class="radio-view">
 			<div class="form-check-inline">
 				<label class="form-check-label" for="radio2">
-					<input type="radio" class="form-check-input" id="radio2" name="nationality" value="forigenr" checked>Forienger
+					<input type="radio" class="form-check-input" id="radio2" name="nationality" value="F" checked>Forienger
 				</label>
 				</div>
 				<div class="form-check-inline">
 				<label class="form-check-label" for="radio1">
-					<input type="radio" class="form-check-input" id="radio1" name="nationality" value="citizen" >Citizen
+					<input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Citizen
 				</label>
 				</div>
 				

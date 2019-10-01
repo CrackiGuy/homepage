@@ -265,13 +265,17 @@ function checkTheDropdowns(){
              $.each(data,function(index,item) 
              {
                  if ($('#box1').val()==item.name) {
-                   
-                    console.log($('#box1').val());
-                    console.log($('#box2').val());
+                    // toCity.attr("disabled", true);
                     submit.attr("disabled", true);
                    
                  }else{
-                     items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                     if ($('#box1').val()=="origin") {
+                        items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                        submit.attr("disabled", true);
+                     }else{
+                        items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                     }
+                   
                  }
            
           
