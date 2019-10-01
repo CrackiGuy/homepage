@@ -32,7 +32,7 @@
 				Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" readonly>, 
 				Child <input type="number" name="child_quantity[]" id="child_quantity" value="0" readonly>, 
 				Infant <input type="number" name="infant_quantity[]" id="infant_quantity" value="0" readonly>
-				<input type="hidden" id="total_quantity" name="total_quantity[]" class=" input-number" value="1" min="1" max="9">
+				<input type="hidden" id="total_quantity" name="total_quantity[]" class="input-number" value="1" min="1" max="9">
 			</div>
 				<br>
 				<div id="demo" class="view-passenger collapse">

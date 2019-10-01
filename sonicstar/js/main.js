@@ -91,7 +91,11 @@ $(document).ready(function() {
 });
 $(document).click(function(e) {
     console.log(e);
-    if (!$(e.target).is('.fa')) {
+    if ($(e.target).is('.fa')) {
+        $('.collapse').collapse('show');
+    } else if ($(e.target).is('button')) {
+        $('.collapse').collapse('show');
+    } else {
         $('.collapse').collapse('hide');
     }
 });
