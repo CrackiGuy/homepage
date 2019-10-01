@@ -14,7 +14,7 @@
 				
 			</select>
 		</div>
-		<i class="fa fa-long-arrow-right d-icon"></i>
+		<i class="fa fa-long-arrow-right d-none d-lg-block"></i>
 		<div class="form-group col-md-12 col-lg-3">
 			<select class="select2class" id="box2" name="arrival_location[]">
 		
@@ -40,7 +40,7 @@
 						<div class="row">
 							<div class="input-group name-holder">
 								<div class="col-5">
-									<span class="name">Adult</span>
+									<span class="name"><i class="fa fa-male"></i>Adult</span>
 								</div>
 								<div class="col-7">
 									<button class='minus' field='quantity'><i class="fa fa-minus"></i></button>
@@ -50,7 +50,7 @@
 							</div>
 							<div class="input-group name-holder">
 								<div class="col-5">
-									<span class="name">Child</span>
+									<span class="name"><i class="fa fa-female"></i>Child</span>
 								</div>
 								<div class="col-7">
 									<button class='child_minus' field='child_quantity' ><i class="fa fa-minus"></i></button>
@@ -60,7 +60,7 @@
 							</div>
 							<div class="input-group name-holder">
 								<div class="col-5">
-									<span class="name">infant</span>
+									<span class="name"><i class="fa fa-child"></i>infant</span>
 								</div>
 								<div class="col-7">
 									<button class='infant_minus' field='infant_quantity' ><i class="fa fa-minus"></i></button>
@@ -106,7 +106,7 @@
 				</select>
 				<input type="hidden" id="dep2" required name="departure_location[]">
 			</div>
-			<i class="fa fa-exchange d-icon"></i>
+			<i class="fa fa-exchange d-none d-lg-block"></i>
 			<div class="form-group col-md-12 col-lg-3">
 				<select class="select2class locations0" id="round_arrival_location" name="arrival_location[]" required>
 				
@@ -134,7 +134,7 @@
 							<div class="row">
 									<div class="input-group name-holder">
 										<div class="col-5">
-											<span class="name">Adult</span>
+											<span class="name"><i class="fa fa-male"></i>Adult</span>
 										</div>
 										<div class="col-7">
 											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus"></i></button>
@@ -144,7 +144,7 @@
 									</div>
 									<div class="input-group name-holder">
 										<div class="col-5">
-											<span class="name">Child</span>
+											<span class="name"><i class="fa fa-female"></i>Child</span>
 										</div>
 										<div class="col-7">
 											<button class='round_child_minus' field='round_child_quantity'><i class="fa fa-minus"></i></button>
@@ -154,7 +154,7 @@
 									</div>
 									<div class="input-group name-holder">
 										<div class="col-5">
-											<span class="name">infant</span>
+											<span class="name"><i class="fa fa-child"></i>infant</span>
 										</div>
 										<div class="col-7">
 											<button class='round_infant_minus' field='round_infant_quantity'><i class="fa fa-minus"></i></button>
