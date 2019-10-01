@@ -7,6 +7,15 @@ var arr=$("#arr2");
 $( document ).ready(function() {
 
 
+    $("#round_adult_quantity").val(1);
+    $("#round_child_quantity").val(0);
+    $("#round_infant_quantity").val(0);
+    $("#round_total_quantity").val(1);
+
+    $(".qty").val(0);
+    
+    $(".qty_adult").val(1);
+
     // submit.attr("disabled",true);
     var roundflightto="";
     roundflightto+="<option value='origin'>Flight To</option>";
