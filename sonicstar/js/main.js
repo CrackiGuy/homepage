@@ -90,8 +90,7 @@ $(document).ready(function() {
     });
 });
 $(document).click(function(e) {
-    console.log($(e.target).parent());
-    if (!$(e.target).is('.fa')) {
+    if (!$(e.target).is('.ggwp')) {
         $('.collapse').collapse('hide');
     }
 });

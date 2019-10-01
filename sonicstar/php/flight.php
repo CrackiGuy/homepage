@@ -35,37 +35,37 @@
 				<input type="hidden" id="total_quantity" name="total_quantity[]" class="input-number" value="1" min="1" max="9">
 			</div>
 				<br>
-				<div id="demo" class="view-passenger collapse">
-					<div class="input-group">
-						<div class="row">
-							<div class="input-group name-holder">
-								<div class="col-5">
-									<span class="name"><i class="fa fa-male"></i>Adult</span>
+				<div id="demo" class="view-passenger collapse ggwp">
+					<div class="input-group ggwp">
+						<div class="row ggwp">
+							<div class="input-group name-holder ggwp">
+								<div class="col-5 ggwp">
+									<span class="name ggwp"><i class="fa fa-male"></i>Adult</span>
 								</div>
-								<div class="col-7">
-									<button class='minus' field='quantity'><i class="fa fa-minus"></i></button>
-									<input type='text' name='quantity' value='1' class='qty' readonly/>
-									<button class='plus' field='quantity' ><i class="fa fa-plus"></i></button>
+								<div class="col-7 ggwp">
+									<button class='minus ggwp' field='quantity'><i class="fa fa-minus ggwp"></i></button>
+									<input type='text' name='quantity' value='1' class='qty ggwp' readonly/>
+									<button class='plus ggwp' field='quantity' ><i class="fa fa-plus ggwp"></i></button>
 								</div>
 							</div>
-							<div class="input-group name-holder">
-								<div class="col-5">
-									<span class="name"><i class="fa fa-female"></i>Child</span>
+							<div class="input-group name-holder ggwp">
+								<div class="col-5 ggwp">
+									<span class="name ggwp"><i class="fa fa-female ggwp"></i>Child</span>
 								</div>
-								<div class="col-7">
-									<button class='child_minus' field='child_quantity' ><i class="fa fa-minus"></i></button>
+								<div class="col-7 ggwp">
+									<button class='child_minus ggwp' field='child_quantity' ><i class="fa fa-minus ggwp"></i></button>
 									<input type='text' name='child_quantity' value='0' class='qty' readonly/>
-									<button class='child_plus' field='child_quantity' ><i class="fa fa-plus"></i></button>
+									<button class='child_plus ggwp' field='child_quantity' ><i class="fa fa-plus ggwp"></i></button>
 								</div>
 							</div>
-							<div class="input-group name-holder">
-								<div class="col-5">
-									<span class="name"><i class="fa fa-child"></i>infant</span>
+							<div class="input-group name-holder ggwp">
+								<div class="col-5 ggwp">
+									<span class="name ggwp"><i class="fa fa-child ggwp"></i>infant</span>
 								</div>
-								<div class="col-7">
-									<button class='infant_minus' field='infant_quantity' ><i class="fa fa-minus"></i></button>
+								<div class="col-7 ggwp">
+									<button class='infant_minus ggwp' field='infant_quantity' ><i class="fa fa-minus ggwp"></i></button>
 									<input type='text' name='infant_quantity' value='0' class='qty' readonly/>
-									<button class='infant_plus' field='infant_quantity' ><i class="fa fa-plus"></i></button>
+									<button class='infant_plus ggwp' field='infant_quantity' ><i class="fa fa-plus ggwp"></i></button>
 								</div>
 							</div>
 						</div>
@@ -131,35 +131,35 @@
 					<br>
 					<div id="roundquantity" class="view-passenger collapse">
 						<div class="input-group">
-							<div class="row">
-									<div class="input-group name-holder">
-										<div class="col-5">
-											<span class="name"><i class="fa fa-male"></i>Adult</span>
+							<div class="row ggwp">
+									<div class="input-group name-holder ggwp">
+										<div class="col-5 ggwp">
+											<span class="name ggwp"><i class="fa fa-male ggwp"></i>Adult</span>
 										</div>
-										<div class="col-7">
-											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus"></i></button>
-											<input type='text' name='round_quantity' value='1' class='qty' readonly />
-											<button id='round_adult_plus' field='round_quantity'><i class="fa fa-plus"></i></button>
-										</div>
-									</div>
-									<div class="input-group name-holder">
-										<div class="col-5">
-											<span class="name"><i class="fa fa-female"></i>Child</span>
-										</div>
-										<div class="col-7">
-											<button class='round_child_minus' field='round_child_quantity'><i class="fa fa-minus"></i></button>
-											<input type='text' name='round_child_quantity' value='0' class='qty' readonly />
-											<button class='round_child_plus' field='round_child_quantity'><i class="fa fa-plus"></i></button>
+										<div class="col-7 ggwp">
+											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus ggwp"></i></button>
+											<input type='text' name='round_quantity' value='1' class='qty ggwp' readonly />
+											<button id='round_adult_plus' field='round_quantity'><i class="fa fa-plus ggwp"></i></button>
 										</div>
 									</div>
-									<div class="input-group name-holder">
-										<div class="col-5">
-											<span class="name"><i class="fa fa-child"></i>infant</span>
+									<div class="input-group name-holder ggwp">
+										<div class="col-5 ggwp">
+											<span class="name ggwp"><i class="fa fa-female ggwp"></i>Child</span>
 										</div>
 										<div class="col-7">
-											<button class='round_infant_minus' field='round_infant_quantity'><i class="fa fa-minus"></i></button>
-										<input type='text' name='round_infant_quantity' value='0' class='qty' readonly />
-										<button class='round_infant_plus' field='round_infant_quantity'><i class="fa fa-plus"></i></button>
+											<button class='round_child_minus' field='round_child_quantity'><i class="fa fa-minus ggwp"></i></button>
+											<input type='text' name='round_child_quantity' value='0' class='qty ggwp' readonly />
+											<button class='round_child_plus' field='round_child_quantity'><i class="fa fa-plus ggwp"></i></button>
+										</div>
+									</div>
+									<div class="input-group name-holder ggwp">
+										<div class="col-5 ggwp">
+											<span class="name ggwp"><i class="fa fa-child ggwp"></i>infant</span>
+										</div>
+										<div class="col-7 ggwp">
+											<button class='round_infant_minus ggwp' field='round_infant_quantity'><i class="fa fa-minus ggwp"></i></button>
+										<input type='text' name='round_infant_quantity' value='0' class='qty ggwp' readonly />
+										<button class='round_infant_plus ggwp' field='round_infant_quantity'><i class="fa fa-plus ggwp"></i></button>
 										</div>
 									</div>
 							</div>
