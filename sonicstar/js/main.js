@@ -90,7 +90,7 @@ $(document).ready(function() {
     });
 });
 $(document).click(function(e) {
-    console.log(e);
+    console.log($(e.target).parent());
     if (!$(e.target).is('.fa')) {
         $('.collapse').collapse('hide');
     }
