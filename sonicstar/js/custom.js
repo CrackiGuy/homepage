@@ -28,8 +28,8 @@ $(document).ready(function() {
     
         $.each(data,function(index,item) 
         {
-            flightto+="<option value='"+item.name+"'>"+item.name+"</option>";
-            flightfrom+="<option value='"+item.name+"'>"+item.name+"</option>";
+            flightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+            flightfrom+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
         });
         $("#box1").html(flightfrom); 
         $("#box2").html(flightto);
@@ -280,10 +280,10 @@ function checkTheDropdowns(){
                    
                  }else{
                      if ($('#box1').val()=="origin") {
-                        items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                        items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                         submit.attr("disabled", true);
                      }else{
-                        items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                        items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                      }
                    
                  }
