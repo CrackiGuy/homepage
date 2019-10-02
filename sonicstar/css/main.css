@@ -828,4 +828,7 @@
         .col-7 {
             padding-right: 0 !important;
         }
-        /* Car */
+        
+        .form-control[readonly] {
+            background-color: #fff;
+        }

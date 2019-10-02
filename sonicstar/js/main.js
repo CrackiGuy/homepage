@@ -61,8 +61,6 @@ $(function() {
 
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
-        console.log(startDate);
-        console.log(endDate);
     });
     // $('#departure_date').daterangepicker()
     $('#one-date').daterangepicker({
@@ -79,7 +77,6 @@ $(function() {
         opens: 'right',
         minDate: moment(),
         showDropdowns: true,
-        showWeekNumbers: true,
         locale: {
             format: 'DD MMM YYYY'
         }
@@ -89,7 +86,6 @@ $(function() {
         opens: 'right',
         minDate: moment(),
         showDropdowns: true,
-        showWeekNumbers: true,
         locale: {
             format: 'DD MMM YYYY'
         }
@@ -196,7 +192,6 @@ $('#daily_dropoff_date').daterangepicker({
     opens: 'right',
     minDate: moment(),
     showDropdowns: true,
-    showWeekNumbers: true,
     locale: {
         format: 'DD MMM YYYY'
     }
@@ -207,7 +202,6 @@ $('#daily_dropoff_date1').daterangepicker({
     opens: 'right',
     minDate: moment(),
     showDropdowns: true,
-    showWeekNumbers: true,
     locale: {
         format: 'DD MMM YYYY'
     }
@@ -218,7 +212,6 @@ $('#one-date').daterangepicker({
     opens: 'right',
     minDate: moment(),
     showDropdowns: true,
-    showWeekNumbers: true,
     locale: {
         format: 'D MMMM YYYY'
     }
