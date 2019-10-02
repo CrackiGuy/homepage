@@ -52,12 +52,12 @@ $(function() {
         startDate: moment().add('days', 1),
         endDate: moment().add('days', 1),
         locale: {
-            format: 'DD MMM YYYY'
+            format: 'DD MMMM YYYY'
         }
 
     }).on('apply.daterangepicker', function(e, picker) {
-        var startDate = picker.startDate.format('DD MMM YYYY');
-        var endDate = picker.endDate.format('DD MMM YYYY');
+        var startDate = picker.startDate.format('DD/MM/YYYY');
+        var endDate = picker.endDate.format('DD/MM/YYYY');
 
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
@@ -71,9 +71,14 @@ $(function() {
         minDate: moment().add('days', 1),
         showDropdowns: true,
         locale: {
-            format: 'D MMMM YYYY'
+            format: 'DD MMMM YYYY'
         }
+    },function(choosen_date) {
+    
+    $("#one_date").val(choosen_date.format('DD/MM/YYYY'))
+    
     });
+      
     $('#daily_pickup_date').daterangepicker({
         singleDatePicker: true,
         opens: 'right',

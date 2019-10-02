@@ -22,7 +22,8 @@
 			</select>
 		</div>
 		<div class="form-group col-md-12 col-lg-3">
-			<input type="text" name="departure_date[]" class="form-control" id="one-date" placeholder="Date">
+			<input type="text" class="form-control" id="one-date" placeholder="Date">
+			<input type="hidden" name="departure_date[]" id="one_date">
 		</div>
 		<div class="form-group col-md-12 col-lg-2">
 			<div class="passenger">
