@@ -32,7 +32,7 @@
                         <span class="d-none d-lg-inline"> Air Ticketing</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.sonicstartravel.com/car_rental/">
+                    <a class="nav-link" data-toggle="tab" href="#car">
                         <i class="fa fa-car" aria-hidden="true"></i>
                         <span class="d-none d-lg-inline">Car Rental</span></a>
                 </li>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div id="car" class="container tab-pane fade">
-                    car
+                    <?php include('sonicstar/php/car.php')?>
                 </div>
                 <div id="tour" class="container tab-pane fade">
                     tour

@@ -70,9 +70,28 @@ $(function() {
         opens: 'right',
         minDate: moment().add('days', 1),
         showDropdowns: true,
-        showWeekNumbers: true,
         locale: {
             format: 'D MMMM YYYY'
+        }
+    });
+    $('#daily_pickup_date').daterangepicker({
+        singleDatePicker: true,
+        opens: 'right',
+        minDate: moment(),
+        showDropdowns: true,
+        showWeekNumbers: true,
+        locale: {
+            format: 'DD MMM YYYY'
+        }
+    });
+    $('#daily_pickup_date1').daterangepicker({
+        singleDatePicker: true,
+        opens: 'right',
+        minDate: moment(),
+        showDropdowns: true,
+        showWeekNumbers: true,
+        locale: {
+            format: 'DD MMM YYYY'
         }
     });
 });
@@ -108,3 +127,99 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " aa";
 }
+
+function openCar(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent-car");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks-car");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" aa", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " aa";
+}
+// Car
+$("#daily_dropoff_date").hide();
+$("#dest").hide();
+
+$("#pickup").click(function() {
+    if ($(this).is(":checked")) {
+        $("#daily_pickup_date").show();
+        $("#daily_dropoff_date").hide();
+
+    } else {
+        $("#daily_pickup_date").hide();
+        $("#daily_dropoff_date").show();
+
+    }
+});
+
+$("#dropoff").click(function() {
+    if ($(this).is(":checked")) {
+        $("#daily_pickup_date").hide();
+        $("#daily_dropoff_date").show();
+
+    } else {
+        $("#daily_pickup_date").show();
+        $("#daily_dropoff_date").hide();
+
+
+    }
+});
+
+$("#Highway").click(function() {
+    if ($(this).is(":checked")) {
+        $("#dest").show();
+
+    } else {
+        $("#dest").hide();
+
+    }
+});
+
+$("#city").click(function() {
+    if ($(this).is(":checked")) {
+        $("#dest").hide();
+
+    } else {
+        $("#dest").hide();
+
+    }
+});
+
+
+$('#daily_dropoff_date').daterangepicker({
+    singleDatePicker: true,
+    opens: 'right',
+    minDate: moment(),
+    showDropdowns: true,
+    showWeekNumbers: true,
+    locale: {
+        format: 'DD MMM YYYY'
+    }
+});
+
+$('#daily_dropoff_date1').daterangepicker({
+    singleDatePicker: true,
+    opens: 'right',
+    minDate: moment(),
+    showDropdowns: true,
+    showWeekNumbers: true,
+    locale: {
+        format: 'DD MMM YYYY'
+    }
+});
+// $('#departure_date').daterangepicker()
+$('#one-date').daterangepicker({
+    singleDatePicker: true,
+    opens: 'right',
+    minDate: moment(),
+    showDropdowns: true,
+    showWeekNumbers: true,
+    locale: {
+        format: 'D MMMM YYYY'
+    }
+});
