@@ -4,7 +4,7 @@
 </div>
 
 <div id="one" class="tabcontent" style="display:block">
-	<form class="form-inline" action="http://localhost:8000/search" method="GET">
+	<form class="form-inline" action="https://www.sonicstartravel.com/flight/public/search" method="GET">
 		<input name="flight_count" value="1" id="flight_count" type="hidden">
 		<input type="hidden" name="page" value="0" >
 		<input type="hidden" name="flight_status" value="oneway">
@@ -44,7 +44,7 @@
 								</div>
 								<div class="col-7 ggwp">
 									<button class='minus ggwp' field='quantity'><i class="fa fa-minus ggwp"></i></button>
-									<input type='text' name='quantity' value='1' class='qty_adult ggwp' readonly/>
+									<input type='number' name='quantity' value='1' class='qty_adult ggwp' readonly/>
 									<button class='plus ggwp' field='quantity' ><i class="fa fa-plus ggwp"></i></button>
 								</div>
 							</div>
@@ -95,7 +95,7 @@
 	</form>
 </div>
 <div id="round" class="tabcontent">
-	<form class="form-inline" action="http://localhost:8000/search" method="GET">
+	<form class="form-inline" action="https://www.sonicstartravel.com/flight/public/search" method="GET">
 		<input name="flight_count" value="2" id="flight_count" type="hidden">
 		<input name="flight_status" value="roundtrip" type="hidden">
 		<input name="page" value="0" id="flight_count" type="hidden">
@@ -137,19 +137,19 @@
 											<span class="name ggwp"><i class="fa fa-male ggwp"></i>Adult</span>
 										</div>
 										<div class="col-7 ggwp">
-											<button id='round_adult_minus' field='round_quantity'><i class="fa fa-minus ggwp"></i></button>
-											<input type='text' name='round_quantity' value='1' class='qty_adult ggwp' readonly />
-											<button id='round_adult_plus' field='round_quantity'><i class="fa fa-plus ggwp"></i></button>
+											<button id='round_adult_minus' field='round_quantity' class="ggwp"><i class="fa fa-minus ggwp"></i></button>
+											<input type='number' name='round_quantity' value='1' class='qty_adult ggwp' readonly />
+											<button id='round_adult_plus' field='round_quantity' class="ggwp"><i class="fa fa-plus ggwp"></i></button>
 										</div>
 									</div>
 									<div class="input-group name-holder ggwp">
 										<div class="col-5 ggwp">
 											<span class="name ggwp"><i class="fa fa-female ggwp"></i>Child</span>
 										</div>
-										<div class="col-7">
-											<button class='round_child_minus' field='round_child_quantity'><i class="fa fa-minus ggwp"></i></button>
-											<input type='text' name='round_child_quantity' value='0' class='qty ggwp' readonly />
-											<button class='round_child_plus' field='round_child_quantity'><i class="fa fa-plus ggwp"></i></button>
+										<div class="col-7 ggwp">
+											<button class='round_child_minus ggwp' field='round_child_quantity'><i class="fa fa-minus ggwp"></i></button>
+											<input type='number' name='round_child_quantity' value='0' class='qty ggwp' readonly />
+											<button class='round_child_plus ggwp' field='round_child_quantity'><i class="fa fa-plus ggwp"></i></button>
 										</div>
 									</div>
 									<div class="input-group name-holder ggwp">
@@ -158,7 +158,7 @@
 										</div>
 										<div class="col-7 ggwp">
 											<button class='round_infant_minus ggwp' field='round_infant_quantity'><i class="fa fa-minus ggwp"></i></button>
-										<input type='text' name='round_infant_quantity' value='0' class='qty ggwp' readonly />
+										<input type='number' name='round_infant_quantity' value='0' class='qty ggwp' readonly />
 										<button class='round_infant_plus ggwp' field='round_infant_quantity'><i class="fa fa-plus ggwp"></i></button>
 										</div>
 									</div>
