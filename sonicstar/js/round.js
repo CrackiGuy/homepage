@@ -26,8 +26,8 @@ $( document ).ready(function() {
    
        $.each(data,function(index,item) 
        {
-        roundflightto+="<option value='"+item.name+"'>"+item.name+"</option>";
-        roundflightfrom+="<option value='"+item.name+"'>"+item.name+"</option>";
+        roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+        roundflightfrom+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
        });
        $("#round_departure_location").html(roundflightfrom); 
        $("#round_arrival_location").html(roundflightto);
@@ -63,10 +63,10 @@ roundfromCity.on("change",function(){
             }else{
 
                 if ($('#round_departure_location').val()=="origin") {
-                    items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                    items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                     round_submit.attr("disabled", true);
                 } else {
-                    items+="<option value='"+item.name+"'>"+item.name+"</option>";
+                    items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                 }
                
             }
