@@ -40,6 +40,10 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function(){
+
+ $("#one_date").val(moment().add('days', 1).format('L'));
+});
 
 //Datepicker
 var startDate = '';
@@ -51,6 +55,7 @@ $(function() {
         minDate: moment().add('days', 1),
         startDate: moment().add('days', 1),
         endDate: moment().add('days', 1),
+        autoUpdateInput: true,
         locale: {
             format: 'DD MMMM YYYY'
         }
@@ -62,18 +67,19 @@ $(function() {
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
     });
-    // $('#departure_date').daterangepicker()
+  
     $('#one-date').daterangepicker({
         singleDatePicker: true,
         opens: 'right',
         minDate: moment().add('days', 1),
         showDropdowns: true,
+        autoUpdateInput: true,
         locale: {
             format: 'DD MMMM YYYY'
         }
     },function(choosen_date) {
     
-    $("#one_date").val(choosen_date.format('MM/DD/YYYY'))
+    $("#one_date").val(choosen_date.format('MM/DD/YYYY'));
     
     });
       
