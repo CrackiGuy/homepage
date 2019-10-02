@@ -56,8 +56,8 @@ $(function() {
         }
 
     }).on('apply.daterangepicker', function(e, picker) {
-        var startDate = picker.startDate.format('DD/MM/YYYY');
-        var endDate = picker.endDate.format('DD/MM/YYYY');
+        var startDate = picker.startDate.format('MM/DD/YYYY');
+        var endDate = picker.endDate.format('MM/DD/YYYY');
 
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
@@ -73,7 +73,7 @@ $(function() {
         }
     },function(choosen_date) {
     
-    $("#one_date").val(choosen_date.format('DD/MM/YYYY'))
+    $("#one_date").val(choosen_date.format('MM/DD/YYYY'))
     
     });
       
