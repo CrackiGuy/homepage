@@ -796,7 +796,7 @@
         }
         
         .radio-view {
-            height: 35px;
+            height: 45px;
             font-size: 14px;
         }
         
@@ -828,4 +828,11 @@
         .col-7 {
             padding-right: 0 !important;
         }
-        /* Car */
+        
+        .form-control[readonly] {
+            background-color: #fff;
+        }
+        
+        input[type="radio"] {
+            margin-right: 7px !important;
+        }
