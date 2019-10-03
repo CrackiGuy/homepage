@@ -67,7 +67,7 @@ $(function() {
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
     });
-
+    
     $('#pickupdate').daterangepicker({
         opens: 'right',
         minDate: moment().add('days', 1),
@@ -105,8 +105,11 @@ $(function() {
         opens: 'right',
         minDate: moment(),
         autoUpdateInput: false,
+        locale: {
+            format: 'DD MMMM YYYY'
+        }
     }, function(chosen_date) {
-        $('#daily_pickup_date').val(chosen_date.format('DD MMM YYYY'));
+        $('#daily_pickup_date').val(chosen_date.format('MM/DD/YYYY'));
     });
     $('#daily_pickup_date1').daterangepicker({
         singleDatePicker: true,
@@ -114,8 +117,11 @@ $(function() {
         minDate: moment(),
         showDropdowns: true,
         autoUpdateInput: false,
+        locale: {
+            format: 'DD MMMM YYYY'
+        }
     }, function(chosen_date) {
-        $('#daily_pickup_date1').val(chosen_date.format('DD MMM YYYY'));
+        $('#daily_pickup_date1').val(chosen_date.format('MM/DD/YYYY'));
     });
 });
 $(document).ready(function() {
@@ -220,8 +226,11 @@ $('#daily_dropoff_date').daterangepicker({
     minDate: moment(),
     showDropdowns: true,
     autoUpdateInput: false,
+    locale: {
+        format: 'DD MMMM YYYY'
+    }
 }, function(chosen_date) {
-    $('#daily_dropoff_date').val(chosen_date.format('DD MMM YYYY'));
+    $('#daily_dropoff_date').val(chosen_date.format('MM/DD/YYYY'));
 });
 
 $('#daily_dropoff_date1').daterangepicker({
@@ -230,8 +239,11 @@ $('#daily_dropoff_date1').daterangepicker({
     minDate: moment(),
     showDropdowns: true,
     autoUpdateInput: false,
+    locale: {
+        format: 'DD MMMM YYYY'
+    }
 }, function(chosen_date) {
-    $('#daily_dropoff_date1').val(chosen_date.format('DD MMM YYYY'));
+    $('#daily_dropoff_date1').val(chosen_date.format('MM/DD/YYYY'));
 });
 // $('#departure_date').daterangepicker()
 $('#one-date').daterangepicker({
