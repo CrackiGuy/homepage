@@ -40,9 +40,9 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function(){
+$(document).ready(function() {
 
- $("#one_date").val(moment().add('days', 1).format('L'));
+    $("#one_date").val(moment().add('days', 1).format('L'));
 });
 
 //Datepicker
@@ -57,7 +57,7 @@ $(function() {
         endDate: moment().add('days', 1),
         autoUpdateInput: true,
         locale: {
-            format: 'DD MMMM YYYY'
+            format: 'D MMM YYYY'
         }
 
     }).on('apply.daterangepicker', function(e, picker) {
@@ -67,7 +67,7 @@ $(function() {
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
     });
-    
+
     $('#pickupdate').daterangepicker({
         opens: 'right',
         minDate: moment().add('days', 1),
@@ -75,7 +75,7 @@ $(function() {
         endDate: moment().add('days', 1),
         autoUpdateInput: true,
         locale: {
-            format: 'DD MMMM YYYY'
+            format: 'D MMM YYYY'
         }
 
     }).on('apply.daterangepicker', function(e, picker) {
@@ -94,9 +94,9 @@ $(function() {
         locale: {
             format: 'DD MMMM YYYY'
         }
-    },function(choosen_date) {
+    }, function(choosen_date) {
 
-    $("#one_date").val(choosen_date.format('MM/DD/YYYY'));
+        $("#one_date").val(choosen_date.format('MM/DD/YYYY'));
 
     });
 
@@ -227,7 +227,7 @@ $('#daily_dropoff_date').daterangepicker({
     showDropdowns: true,
     autoUpdateInput: false,
     locale: {
-        format: 'DD MMMM YYYY'
+        format: 'D MMM YYYY'
     }
 }, function(chosen_date) {
     $('#daily_dropoff_date').val(chosen_date.format('MM/DD/YYYY'));
@@ -240,7 +240,7 @@ $('#daily_dropoff_date1').daterangepicker({
     showDropdowns: true,
     autoUpdateInput: false,
     locale: {
-        format: 'DD MMMM YYYY'
+        format: 'D MMM YYYY'
     }
 }, function(chosen_date) {
     $('#daily_dropoff_date1').val(chosen_date.format('MM/DD/YYYY'));
@@ -252,6 +252,6 @@ $('#one-date').daterangepicker({
     minDate: moment(),
     showDropdowns: true,
     locale: {
-        format: 'D MMMM YYYY'
+        format: 'D MMM YYYY'
     }
 });
