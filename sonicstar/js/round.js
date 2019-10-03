@@ -34,9 +34,9 @@ $( document ).ready(function() {
    
    });
    
-   var today = moment().add('days', 1).format('DD MMM, YYYY');
-   $("#departure_date").val(today);
-   $("#return_date").val(today);
+
+   $("#departure_date").val(moment().add('days', 1).format('L'));
+   $("#return_date").val(moment().add('days', 1).format('L'));
    roundtoCity.attr("disabled", true);
    round_submit.attr("disabled", true);   
  

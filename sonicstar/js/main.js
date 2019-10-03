@@ -43,13 +43,18 @@ $(document).ready(function() {
 $(document).ready(function(){
 
  $("#one_date").val(moment().add('days', 1).format('L'));
+
+
 });
+
+
 
 //Datepicker
 var startDate = '';
 var endDate = '';
 
 $(function() {
+  
     $('#round_trip').daterangepicker({
         opens: 'right',
         minDate: moment().add('days', 1),
@@ -217,12 +222,12 @@ $('#daily_dropoff_date1').daterangepicker({
     $('#daily_dropoff_date1').val(chosen_date.format('DD MMM YYYY'));
 });
 // $('#departure_date').daterangepicker()
-$('#one-date').daterangepicker({
-    singleDatePicker: true,
-    opens: 'right',
-    minDate: moment(),
-    showDropdowns: true,
-    locale: {
-        format: 'D MMMM YYYY'
-    }
-});
+// $('#one-date').daterangepicker({
+//     singleDatePicker: true,
+//     opens: 'right',
+//     minDate: moment(),
+//     showDropdowns: true,
+//     locale: {
+//         format: 'D MMMM YYYY'
+//     }
+// });

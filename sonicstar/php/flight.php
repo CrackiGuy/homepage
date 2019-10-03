@@ -116,8 +116,8 @@
 			</div>
 			<div class="form-group col-md-12 col-lg-3">
 				<input type="text" class="form-control" id="round_trip" placeholder="Date" required>
-				<input type="hidden"  name="departure_date[]" value="" class="form-control" id="departure_date" placeholder="Date">
-				<input type="hidden"  name="departure_date[]" value="" class="form-control" id="return_date" placeholder="Date">
+				<input type="hidden"  name="departure_date[]" class="form-control" id="departure_date" placeholder="Date">
+				<input type="hidden"  name="departure_date[]" class="form-control" id="return_date" placeholder="Date">
 			</div>
 			<div class="form-group col-md-12 col-lg-2">
 			<div class="passenger">
