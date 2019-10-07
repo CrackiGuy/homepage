@@ -90,6 +90,7 @@
 				
 			</div>
 		</div>
+		
 		<div class="form-group col-3">
 		<button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
 		</div>
@@ -173,12 +174,12 @@
 				<div class="radio-view">
 				<div class="form-check-inline">
 					<label class="form-check-label" for="radio2">
-						<input type="radio" class="form-check-input" id="radio2" name="nationality" value="F" checked>Forienger
+						<input type="radio" class="form-check-input round_radio2" id="radio2" name="nationality" value="F" checked>Forienger
 					</label>
 					</div>
 					<div class="form-check-inline">
 					<label class="form-check-label" for="radio1">
-						<input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Citizen
+						<input type="radio" class="form-check-input round_radio1" id="radio1" name="nationality" value="L" >Citizen
 					</label>
 					</div>
 					

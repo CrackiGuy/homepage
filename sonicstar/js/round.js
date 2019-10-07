@@ -6,7 +6,7 @@ var dep2=$("#dep2");
 var arr=$("#arr2");
 $( document ).ready(function() {
 
-
+  
     $("#round_adult_quantity").val(1);
     $("#round_child_quantity").val(0);
     $("#round_infant_quantity").val(0);
@@ -37,7 +37,7 @@ $( document ).ready(function() {
 
    $("#departure_date").val(moment().add('days', 1).format('L'));
    $("#return_date").val(moment().add('days', 1).format('L'));
-   roundtoCity.attr("disabled", true);
+//    roundtoCity.attr("disabled", true);
    round_submit.attr("disabled", true);   
  
 
@@ -46,10 +46,9 @@ $( document ).ready(function() {
 roundfromCity.on("change",function(){
 
     roundtoCity.attr("disabled", false);
-    roundcondition();
-
-    var items="";
-    items+="<option value='origin'>Flight To</option>";
+ 
+    var roundflightto="";
+    roundflightto+="<option value='origin'>Flight To</option>";
     $.getJSON("sonicstar/php/json.php",function(data){
     
         $.each(data,function(index,item) 
@@ -60,53 +59,72 @@ roundfromCity.on("change",function(){
                console.log($('#round_arrival_location').val());
                round_submit.attr("disabled", true);
               
-            }else{
+            }else if($('#round_departure_location').val()!=item.name){
 
                 if ($('#round_departure_location').val()=="origin") {
-                    items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                    roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                     round_submit.attr("disabled", true);
                 } else {
-                    items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                    roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                 }
-               
             }
-      
-     
-            
         });
 
-        $("#round_arrival_location").html(items); 
+    
+        $("#round_arrival_location").html(roundflightto); 
     
     });
-
-    var departure = $( "#round_departure_location" ).val();
+   
+    var departure = $("#round_departure_location" ).val();
+    console.log(departure);
     arr.val(departure);
-
+    roundcondition();
     
-    // console.log(departure);
+    console.log(departure+"round");
 });
 
 roundtoCity.on("change",function(){
         // let $boxval = $("#round_arrival_location").val();
-        roundcondition();
-
-        // if ($boxval === "origin") {
-            
+      
+        if ($("#round_departure_location" ).val()==$("#round_arrival_location").val()) {
+             var items="";
+        items+="<option value='origin'>Flight From</option>";
+        $.getJSON("sonicstar/php/json.php",function(data){
         
-        //     $('#round_departure_location option:eq(0)').prop('selected', true).trigger('change');
-
-           
-        // } else {
-        //     $("#round_departure_location > option").each(function(ind) {
-        //         let ele = $("#round_departure_location > option").eq(ind);
-        //         if (ele.val() === $boxval) ele.attr("disabled", "disabled");
-        //         else ele.removeAttr("disabled");
-        //      });
-        // }
-        var arrvie = $( "#round_arrival_location" ).val();
+            $.each(data,function(index,item) 
+            {
+                if ($('#round_arrival_location').val()==item.name) {
+                  
+                    items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                   round_submit.attr("disabled", true);
+                  
+                }else{
     
+                    if ($('#round_arrival_location').val()=="origin") {
+                        items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                        round_submit.attr("disabled", true);
+                    } else {
+                        items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                    }
+                   
+                }
+          
+         
+                
+            });
+    
+            $("#round_departure_location").html(items); 
+        
+        });
+     
+        }
+
+       
+        var arrvie = $( "#round_arrival_location" ).val();
+        console.log(arrvie+"arrive");
         dep2.val(arrvie);
-        // console.log(arrvie);
+      
+        roundcondition();
    
     });
 
