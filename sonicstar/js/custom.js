@@ -69,13 +69,46 @@ $(".round_radio1").change(function(){
 toCity.on("change", function() {
     // $("#round_submit").attr('disabled',flase);
     firstcondition();
-    
+    var round_submit=$("#round_submit");
+    round_submit.attr("disabled",false);
     console.log($('#box2').val());
     selectboxto=$("#box2").val();
     selectboxfrom=$("#box1").val();
+
+    if ($("#box1" ).val()==$("#box2").val()) {
+        var items="";
+        items+="<option value='origin'>Flight From</option>";
+        $.getJSON("sonicstar/php/json.php",function(data){
+        
+            $.each(data,function(index,item) 
+            {
+                if ($('#round_arrival_location').val()==item.name) {
+                  
+                    items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                   submit.attr("disabled", true);
+                  
+                }else{
+    
+                    if ($('#round_arrival_location').val()=="origin") {
+                        items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                        submit.attr("disabled", true);
+                    } else {
+                        items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+                    }
+                   
+                }
+          
+         
+                
+            });
+    
+            $("#box1").html(items); 
+        
+        });
+    }
+
     var roundflightto="";
     roundflightto+="<option value='origin'>Flight To</option>";
-
     var roundflightfrom="";
     roundflightfrom+="<option value='origin'>Flight From</option>";
    $.getJSON("sonicstar/php/json.php",function(data){
@@ -86,8 +119,16 @@ toCity.on("change", function() {
             roundflightto+="<option value='"+item.name+"' selected>"+item.name+"&nbsp;("+item.short_code+")</option>";
             // roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
            } else{
-            // roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
-            roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+            if ($('#round_departure_location').val() == item.name) {
+                // toCity.attr("disabled", true);
+                console.log($('#box1').val()+"ddd");
+              
+
+            }
+            else{
+                roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
+            }
+    
            }
     
            
@@ -276,9 +317,9 @@ function firstcondition() {
 function checkTheDropdowns() {
 
     var roundtoCity = $("#round_arrival_location");
-    var round_submit=$("#round_submit");
+
     toCity.attr("disabled", false);
-    round_submit.attr("disabled",false);
+  
     roundtoCity.attr("disabled", false);
     selectboxfrom=$("#box1").val();
 
