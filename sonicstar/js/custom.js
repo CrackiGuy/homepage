@@ -334,7 +334,9 @@ function checkTheDropdowns() {
 
    var departure = $( "#box1" ).val();
    arr.val(departure);
-   
+   console.log(12);
 };
 checkTheDropdowns();
 $('#box1').on('change', checkTheDropdowns);
+
+
