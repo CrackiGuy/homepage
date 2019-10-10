@@ -336,10 +336,10 @@ function checkTheDropdowns() {
                 submit.attr("disabled", true);
 
             } else {
-                if ($('#box1').val() == "origin") {
+                if ($('#box1').val() == "origin") {                       
                     items += "<option value='" + item.name + "'>" + item.name + "&nbsp;(" + item.short_code + ")</option>";
                     submit.attr("disabled", true);
-                } else {
+                } else {      
                     items += "<option value='" + item.name + "'>" + item.name + "&nbsp;(" + item.short_code + ")</option>";
                 }
 

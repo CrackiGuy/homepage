@@ -85,10 +85,10 @@ roundfromCity.on("change",function(){
     console.log(departure+"round");
 
     var itembox1="";
-    itembox1+="<option value='origin'>Flight To</option>";
+    itembox1+="<option value='origin'>Flight From</option>";
 
     var itembox2="";
-    itembox2+="<option value='origin'>Flight From</option>";
+    itembox2+="<option value='origin'>Flight To</option>";
    $.getJSON("sonicstar/php/json.php",function(data){
    
        $.each(data,function(index,item) 
@@ -152,10 +152,10 @@ roundtoCity.on("change",function(){
         selectboxto=$("#round_departure_location").val();
         selectboxfrom=$("#round_arrival_location").val();
         var itembox1="";
-        itembox1+="<option value='origin'>Flight To</option>";
+        itembox1+="<option value='origin'>Flight From</option>";
     
         var itembox2="";
-        itembox2+="<option value='origin'>Flight From</option>";
+        itembox2+="<option value='origin'>Flight To</option>";
        $.getJSON("sonicstar/php/json.php",function(data){
        
            $.each(data,function(index,item) 
