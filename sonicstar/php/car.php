@@ -49,7 +49,7 @@
                <?php } ?>
              </select>
 
-    
+
     </div>
     <div class="form-group col-md-12 col-lg-3">
             <input type="text" class="car-date" name="daily[pickup_date]" id="daily_pickup_date" placeholder="Pick Up Date">
@@ -102,6 +102,7 @@
           <input type="hidden" class="car-date" id="daily_dropoff_date1" name="daily[dropoff_date]" placeholder="Drop Off Date" >
 
 
+  
 	    </div>
 
 			<div class="container">
