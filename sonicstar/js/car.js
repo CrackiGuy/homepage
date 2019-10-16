@@ -37,6 +37,7 @@ $('#pickupdate').daterangepicker({
       
     }
    
+    
 
 });
 
