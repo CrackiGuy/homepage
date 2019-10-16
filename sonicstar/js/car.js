@@ -32,8 +32,10 @@ $('#pickupdate').daterangepicker({
             // alert(1);
             if (index ==0) {
                 $("#dynamicrow").append('<div class="row"><div class="col-md-6">'+moment(a).format('l')+'<br>Yangon</div><div class="col-md-6"><select><option>hihi</option><option>hay hay</option></select></div><br>');
+            }else if (index>0 && index!=diffDays) {
+                $("#dynamicrow").append('<div class="row"><div class="col-md-6">'+moment(a).add('days', index).format('l')+'<br>Mandalay</div><div class="col-md-6"><select><option>hihi</option><option>hay hay</option></select></div><br>');
             }else{
-                $("#dynamicrow").append('<div class="row"><div class="col-md-6">'+moment(a).add('days', index).format('l')+'<br>Mandalay</div><div class="col-md-6"><select><option>hihi</option><option>ss</option></select></div><br>');
+                $("#dynamicrow").append('<div class="row"><div class="col-md-6">'+moment(a).add('days', index).format('l')+'<br>Mandalay</div><div class="col-md-6"><input type="text" value="hi test" readonly></div><br>');
             }    
         }
       
