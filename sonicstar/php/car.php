@@ -100,13 +100,39 @@
         <input type="text" class="car-date"  id="pickupdate" placeholder="Pick Up Date">
 	        <input type="hidden" class="car-date" name="daily[pickup_date]" id="daily_pickup_date1" placeholder="Pick Up Date">
           <input type="hidden" class="car-date" id="daily_dropoff_date1" name="daily[dropoff_date]" placeholder="Drop Off Date" >
-
-
 	    </div>
-
 			<div class="container">
         <br>
 				<button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
 			</div>
 	</form>
+</div>
+
+
+<!-- For MOdal -->
+<div class="modal fade" id="exampleModaldate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="dynamicrow">
+        <div class="row">
+          <div class="col-md-6">
+            <b>Dates</b>
+          </div>
+          <div class="col-md-6">
+            <b>Destination</b>
+          </div>
+        </div>
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>      
+      </div>
+    </button>
+  </div>
 </div>
