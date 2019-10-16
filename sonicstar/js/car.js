@@ -8,6 +8,7 @@ $('#pickupdate').daterangepicker({
         format: 'DD MMMM YYYY'
     }
 
+    
 }).on('apply.daterangepicker', function(e, picker) {
     var startDate = picker.startDate.format('MM/DD/YYYY');
     var endDate = picker.endDate.format('MM/DD/YYYY');
@@ -37,7 +38,7 @@ $('#pickupdate').daterangepicker({
       
     }
    
-    
+
 
 });
 
