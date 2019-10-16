@@ -1,6 +1,6 @@
 <?php
 
-    $airport = "SELECT city.title FROM  `cr_manage_attributes` as city INNER JOIN `airport_locations` as airport ON `city`.`id` = `airport`.`city_id`";
+    $airport = "SELECT city.id,city.title FROM  `cr_manage_attributes` as city INNER JOIN `airport_locations` as airport ON `city`.`id` = `airport`.`city_id`";
 
    $destination =  "SELECT dest.id, dest.title, dest.short_desc, city.short_desc as title_mya FROM `cr_manage_attributes` as dest
                 INNER JOIN `cr_manage_attributes` as city ON `dest`.`title`=`city`.`title` AND `city`.`parent_id`=70
@@ -40,20 +40,15 @@
     <div class="form-group col-md-12 col-lg-3">
 
       <select name="car_city" id="car_city_daily1" class="select2class">
-                 <?php foreach ($result1 as $city) {
-                   if($city['id']==89){ ?>
-                       <option value="<?php echo $city['id']; ?>" selected="selected"><?php echo $city['title']; ?></option>
-                   <?php }else{ ?>
-                       <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
-                   <?php } ?>
-               <?php } ?>
+        <?php foreach ($result1 as $city) { ?>
+              <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
+        <?php } ?>
              </select>
 
 
     </div>
     <div class="form-group col-md-12 col-lg-3">
             <input type="text" class="car-date" name="daily[pickup_date]" id="daily_pickup_date" placeholder="Pick Up Date">
-            <input type="hidden" class="car-date" name="daily[pickup_date]" placeholder="Pick Up Date">
 
             <input type="text" class="car-date" id="daily_dropoff_date" name="daily[dropoff_date]" placeholder="Drop Off Date">
     </div>
@@ -102,7 +97,7 @@
           <input type="hidden" class="car-date" id="daily_dropoff_date1" name="daily[dropoff_date]" placeholder="Drop Off Date" >
 
 
-  
+
 	    </div>
 
 			<div class="container">
