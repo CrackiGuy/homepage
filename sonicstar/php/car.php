@@ -52,7 +52,6 @@
     <div class="form-group col-md-12 col-lg-3">
             <input type="text" class="car-date" name="daily[pickup_date]" id="daily_pickup_date" placeholder="Pick Up Date">
 
-
             <input type="text" class="car-date" id="daily_dropoff_date" name="daily[dropoff_date]" placeholder="Drop Off Date">
     </div>
     <div class="form-group col-md-12 col-lg-3">
@@ -64,10 +63,10 @@
 	<form class="form-inline" action="../../carrental/cars">
 
 		<div class="form-group col-12">
-				<div class="radio-view">
+				<div class="radio-view" id="testcheck">
 				<div class="form-check-inline in_city_highway" id="incity" >
           <label class="dropoff" for="city">
-             <input type="radio" name="daily[incity]" id="city" value="in_city" checked="" />In City
+             <input type="radio" name="daily[incity]" id="city" value="in_city" checked/>In City
           </label>
 					</div>
 					<div class="form-check-inline">
@@ -107,8 +106,39 @@
 	</form>
 </div>
 
+<div class="modal fade" id="exampleModaltime" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Choose Hour of Each Day</h5>
+        <button type="button" id="removetime" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+        <div id="timechoose">
+         
+        
+   
+              <!-- <div class="col-6 card border-success">
+                  From Time 
+              </div>
+              <div class="col-6">
+                  To Time  
+              </div> -->
+        </div>
+        </div>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger mx-auto col-4" id="removebtntime" data-dismiss="modal">Applying </button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- For MOdal -->
+<!-- For MOdal multidays highway-->
 <div class="modal fade" id="exampleModaldate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -150,8 +180,10 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" id="remove" class="btn btn-secondary" data-dismiss="modal">Close</button>      
+        <button type="button" id="remove" class="btn btn-secondary mx-auto col-4" data-dismiss="modal">Close</button>      
       </div>
     </button>
   </div>
 </div>
+
+<!-- multi time in city  -->
