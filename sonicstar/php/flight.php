@@ -10,14 +10,12 @@
 		<input type="hidden" name="flight_status" value="oneway">
 		<div class="form-group col-md-12 col-lg-3">
 			<select class="select2class" id="box1" name="departure_location[]">
-			
-				
+		
 			</select>
 		</div>
 		<i class="fa fa-long-arrow-right d-none d-lg-block"></i>
 		<div class="form-group col-md-12 col-lg-3">
 			<select class="select2class" id="box2" name="arrival_location[]">
-		
 			<!--  -->
 			</select>
 		</div>
