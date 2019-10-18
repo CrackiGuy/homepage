@@ -24,24 +24,24 @@ $('#pickupdate').daterangepicker({
     diffDays= Math.round(Math.abs((a - b)/(c)));
     i=1;
     // if ($("#city").is(":checked")) {
-        
+
     // }else{
     //     $('#exampleModaldate').modal('show');
     //     console.log(12);
     // }
     $("#testcheck").find("#city").each(function(){
-        if ($(this).prop('checked')==true){ 
-     
+        if ($(this).prop('checked')==true){
+
             $('#exampleModaltime').modal('show');
             if (diffDays>=0) {
                 for (var index = 0; index <= diffDays; index++) {
                     // alert(1);
                     if (index ==0) {
                         $('#timechoose').append('<div class="timetest">');
-                        $('#timechoose').append('<div class="row timetest1"><input type="text" value="'+moment(a).format('l')+'" name="pickup_date"></div>');
+                        $('#timechoose').append('<div class="row timetest1">'+moment(a).format('l')+'</div>');
                         $('#timechoose').append('<div class="row timetest2"><div class="col-6"><small><b> From Time</b> </small></div><div class="col-6"><small><b> To Time </b> </small> </div> </div>');
-                        $("#timechoose").append('<div class="row timetest3"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[from][]" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[to][]" readonly></div></div>');
-                        $("#timechoose").append('<br></div>');
+                        $("#timechoose").append('<div class="row timetest3"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div></div>');
+                        $("#timechoose").append('</div>');
                     // }else if (index>0 && index!=diffDays) {
                     //     $('#timechoose').append('<div class="timetest">');
                     //     $('#timechoose').append('<div class="row timetest1">'+moment(a).add('days', index).format('l')+'</div>');
@@ -50,13 +50,13 @@ $('#pickupdate').daterangepicker({
                     //     $("#timechoose").append('</div>');
                     }else{
                         $('#timechoose').append('<div class="timetest">');
-                        $('#timechoose').append('<div class="row timetest1"><input type="text" value="'+moment(a).add('days', index).format('l')+'"name="pickup_date"></div>');
+                        $('#timechoose').append('<div class="row timetest1">'+moment(a).add('days', index).format('l')+'</div>');
                         $('#timechoose').append('<div class="row timetest1"><div class="col-6"><small><b> From Time</b> </small></div><div class="col-6"><small><b> To Time </b> </small> </div> </div>');
-                        $("#timechoose").append('<div class="row timetest1"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[from][]" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[to][]" readonly></div></div>');
-                        $("#timechoose").append('<br></div>');
-                    }    
+                        $("#timechoose").append('<div class="row timetest1"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div></div>');
+                        $("#timechoose").append('</div>');
+                    }
                 }
-              
+
             }
             $('.timepick').timepicker({
                 timeFormat: 'h:mm p',
@@ -75,10 +75,10 @@ $('#pickupdate').daterangepicker({
         // maxMinutes: 30,
         // startTime: new Date(0,0,0,15,0,0)
             });
-         
+
         }else
         {
-            $('#exampleModaldate').modal('show');  
+            $('#exampleModaldate').modal('show');
             if (diffDays>=0) {
                 for (var index = 0; index <= diffDays; index++) {
                     // alert(1);
@@ -88,16 +88,16 @@ $('#pickupdate').daterangepicker({
                         $("#dynamicrow").append('<div class="row"><div class="col-md-6">'+moment(a).add('days', index).format('l')+'<br>Mandalay</div><div class="col-md-6"><select><option>hihi</option><option>hay hay</option></select></div><br>');
                     }else{
                         $("#dynamicrow").append('<div class="row"><div class="col-md-6">'+moment(a).add('days', index).format('l')+'<br>Mandalay</div><div class="col-md-6"><input type="text" value="hi test" readonly></div><br>');
-                    }    
+                    }
                 }
-              
+
             }
         }
     })
 
-  
-   
-   
+
+
+
 
 
 });
@@ -141,6 +141,24 @@ $(document).ready(function(){
         dynamic: true,
         dropdown: true,
         scrollbar: true
-        
+
     });
+});
+var pickupCity = $("#daily_pickup_date");
+var dropoffCity = $("#daily_dropoff_date");
+// pickupCity.on("change",function(){
+//   console.log("this is mma");
+//   $('#airport_transfer').removeAttr("disabled");
+//
+// });
+
+
+pickupCity.on("change",function(){
+  $('#airport_pickup').removeAttr("disabled");
+
+});
+
+dropoffCity.on("change",function(){
+  $('#airport_dropoff').removeAttr("disabled");
+
 });

@@ -56,8 +56,9 @@
             <input type="text" class="car-date" id="daily_dropoff_date" name="daily[dropoff_date]" placeholder="Drop Off Date">
     </div>
     <div class="form-group col-md-12 col-lg-3">
-      <button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
-    </div>
+      <button type="submit" id="airport_pickup" class="btn-search float-right" disabled="disabled">Search</button>
+       <button type="submit" id="airport_dropoff" class="btn-search float-right" disabled="disabled">Search</button>
+         </div>
 	</form>
 </div>
 <div id="daily" class="tabcontent-car">
@@ -98,22 +99,23 @@
 			</div>
 			<div class="form-group col-md-12 col-lg-3">
         <input type="text" class="car-date"  id="pickupdate" placeholder="Pick Up Date">
-     
-        
-            
+
+
+
 	        <input type="hidden" class="car-date" name="daily[pickup_date]" id="daily_pickup_date1" placeholder="Pick Up Date">
           <input type="hidden" class="car-date" id="daily_dropoff_date1" name="daily[dropoff_date]" placeholder="Drop Off Date" >
           <div class="col-md-8" style="z-index:999" >
                 <input type="text" class="timepicker" name="daily[pickup_time]">
               </div>
-          
+
               <div class="col-md-8" style="z-index:999"  >
               <input type="text" class="timepicker" name="daily[dropoff_time]" >
               </div>
 	    </div>
 			<div class="container">
         <br>
-				<button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
+        <button type="submit" id="citysearch" class="btn-search float-right">Search</button>
+        <button type="submit" id="highwaysearch" class="btn-search float-right">Search</button>
 			</div>
 	</form>
 </div>

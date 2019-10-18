@@ -156,6 +156,9 @@ function openCar(evt, tabName) {
 // Car
 $("#daily_dropoff_date").hide();
 $("#dest").hide();
+$("#highwaysearch").hide();
+$("#airport_dropoff").hide();
+
 
 $("#pickup").click(function() {
     if ($(this).is(":checked")) {
@@ -173,21 +176,23 @@ $("#dropoff").click(function() {
     if ($(this).is(":checked")) {
         $("#daily_pickup_date").hide();
         $("#daily_dropoff_date").show();
-
+        $("#airport_dropoff").show();
+        $("#airport_pickup").hide();
     } else {
         $("#daily_pickup_date").show();
         $("#daily_dropoff_date").hide();
-
-
     }
 });
 
 $("#Highway").click(function() {
     if ($(this).is(":checked")) {
         $("#dest").show();
+        $("#highwaysearch").show();
+        $("#citysearch").hide();
 
     } else {
         $("#dest").hide();
+        $("#citysearch").show();
 
     }
 });
