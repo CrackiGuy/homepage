@@ -60,7 +60,7 @@
 	</form>
 </div>
 <div id="daily" class="tabcontent-car">
-	<form class="form-inline" action="../../carrental/cars">
+	<form class="form-inline" action="http://localhost/pj/carrental/cars" method="post">
 
 		<div class="form-group col-12">
 				<div class="radio-view" id="testcheck">
@@ -95,9 +95,18 @@
 			</div>
 			<div class="form-group col-md-12 col-lg-3">
         <input type="text" class="car-date"  id="pickupdate" placeholder="Pick Up Date">
+     
+        
+            
 	        <input type="hidden" class="car-date" name="daily[pickup_date]" id="daily_pickup_date1" placeholder="Pick Up Date">
           <input type="hidden" class="car-date" id="daily_dropoff_date1" name="daily[dropoff_date]" placeholder="Drop Off Date" >
-
+          <div class="col-md-8" style="z-index:999" >
+                <input type="text" class="timepicker" name="daily[pickup_time]">
+              </div>
+          
+              <div class="col-md-8" style="z-index:999"  >
+              <input type="text" class="timepicker" name="daily[dropoff_time]" >
+              </div>
 	    </div>
 			<div class="container">
         <br>
@@ -116,24 +125,19 @@
         </button>
       </div>
       <div class="modal-body">
+        <form action="http://localhost/pj/carrental/set-multidays" method="post">
         <div class="container">
         <div id="timechoose">
          
         
-   
-              <!-- <div class="col-6 card border-success">
-                  From Time 
-              </div>
-              <div class="col-6">
-                  To Time  
-              </div> -->
         </div>
         </div>  
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger mx-auto col-4" id="removebtntime" data-dismiss="modal">Applying </button>
+        <button type="submit" class="btn btn-danger mx-auto col-4">Applying </button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
+      </form>
     </div>
   </div>
 </div>

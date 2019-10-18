@@ -38,10 +38,10 @@ $('#pickupdate').daterangepicker({
                     // alert(1);
                     if (index ==0) {
                         $('#timechoose').append('<div class="timetest">');
-                        $('#timechoose').append('<div class="row timetest1">'+moment(a).format('l')+'</div>');
+                        $('#timechoose').append('<div class="row timetest1"><input type="text" value="'+moment(a).format('l')+'" name="pickup_date"></div>');
                         $('#timechoose').append('<div class="row timetest2"><div class="col-6"><small><b> From Time</b> </small></div><div class="col-6"><small><b> To Time </b> </small> </div> </div>');
-                        $("#timechoose").append('<div class="row timetest3"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div></div>');
-                        $("#timechoose").append('</div>');
+                        $("#timechoose").append('<div class="row timetest3"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[from][]" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[to][]" readonly></div></div>');
+                        $("#timechoose").append('<br></div>');
                     // }else if (index>0 && index!=diffDays) {
                     //     $('#timechoose').append('<div class="timetest">');
                     //     $('#timechoose').append('<div class="row timetest1">'+moment(a).add('days', index).format('l')+'</div>');
@@ -50,10 +50,10 @@ $('#pickupdate').daterangepicker({
                     //     $("#timechoose").append('</div>');
                     }else{
                         $('#timechoose').append('<div class="timetest">');
-                        $('#timechoose').append('<div class="row timetest1">'+moment(a).add('days', index).format('l')+'</div>');
+                        $('#timechoose').append('<div class="row timetest1"><input type="text" value="'+moment(a).add('days', index).format('l')+'"name="pickup_date"></div>');
                         $('#timechoose').append('<div class="row timetest1"><div class="col-6"><small><b> From Time</b> </small></div><div class="col-6"><small><b> To Time </b> </small> </div> </div>');
-                        $("#timechoose").append('<div class="row timetest1"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" readonly></div></div>');
-                        $("#timechoose").append('</div>');
+                        $("#timechoose").append('<div class="row timetest1"><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[from][]" readonly></div><div class="col-md-6" style="z-index:99999"><input type="text" class="timepick col-md-11" name="pickup_time[to][]" readonly></div></div>');
+                        $("#timechoose").append('<br></div>');
                     }    
                 }
               
