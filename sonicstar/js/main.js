@@ -40,9 +40,9 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function(){
+$(document).ready(function() {
 
- $("#one_date").val(moment().add('days', 1).format('L'));
+    $("#one_date").val(moment().add('days', 1).format('L'));
 
 
 });
@@ -54,15 +54,16 @@ var startDate = '';
 var endDate = '';
 
 $(function() {
-  
+
     $('#round_trip').daterangepicker({
         opens: 'right',
         minDate: moment().add('days', 1),
         startDate: moment().add('days', 1),
         endDate: moment().add('days', 1),
         autoUpdateInput: true,
+        autoApply: true,
         locale: {
-            format: 'DD MMMM YYYY'
+            format: 'D MMM YYYY'
         }
 
     }).on('apply.daterangepicker', function(e, picker) {
@@ -72,7 +73,7 @@ $(function() {
         $("#departure_date").val(startDate);
         $("#return_date").val(endDate);
     });
-  
+
     $('#one-date').daterangepicker({
         singleDatePicker: true,
         opens: 'right',
@@ -80,14 +81,14 @@ $(function() {
         showDropdowns: true,
         autoUpdateInput: true,
         locale: {
-            format: 'DD MMMM YYYY'
+            format: 'D MMMM YYYY'
         }
-    },function(choosen_date) {
-    
-    $("#one_date").val(choosen_date.format('MM/DD/YYYY'));
-    
+    }, function(choosen_date) {
+
+        $("#one_date").val(choosen_date.format('MM/DD/YYYY'));
+
     });
-      
+
     $('#daily_pickup_date').daterangepicker({
         singleDatePicker: true,
         opens: 'right',

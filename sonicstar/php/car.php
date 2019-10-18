@@ -41,13 +41,14 @@
     <div class="form-group col-md-12 col-lg-3">
 
       <select name="car_city" id="car_city_daily1" class="select2class">
-
-        <?php foreach ($result1 as $city) { ?>
-              <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
+        <?php foreach ($result1 as $city) {
+                    if($city['id']==89){ ?>
+                        <option value="<?php echo $city['id']; ?>" selected="selected"><?php echo $city['title']; ?></option>
+                    <?php }else{ ?>
+                        <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
+                    <?php } ?>
         <?php } ?>
-             </select>
-
-
+        </select>
     </div>
     <div class="form-group col-md-12 col-lg-3">
             <input type="text" class="car-date" name="daily[pickup_date]" id="daily_pickup_date" placeholder="Pick Up Date">
@@ -79,15 +80,17 @@
 			</div>
 			<div class="form-group col-md-12 col-lg-3">
         <select name="car_city" id="car_city_daily" class="select2class">
-          <option value="default" selected="selected">Pickup City</option>
-          <?php foreach ($result1 as $city) { ?>
-            <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
+          <?php foreach ($result1 as $city) {
+            if($city['id']==89){ ?>
+                <option value="<?php echo $city['id']; ?>" selected="selected"><?php echo $city['title']; ?></option>
+            <?php }else{ ?>
+                <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
+            <?php } ?>
           <?php } ?>
         </select>
       </div>
 			<div id="dest" class="form-group col-md-12 col-lg-3">
 					<select name="daily[destination]" id="destination" class="select2class" >
-            <option value="default" selected="selected">Pickup City</option>
             <?php foreach ($result2 as $city) { ?>
                 <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
               <?php } ?>
@@ -128,13 +131,12 @@
         <form action="http://localhost/pj/carrental/set-multidays" method="post">
         <div class="container">
         <div id="timechoose">
-         
-        
+
         </div>
-        </div>  
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-danger mx-auto col-4">Applying </button>
+
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
       </form>
@@ -179,12 +181,12 @@
               </div>
             </div>
         </div>
-      
+
 
       </div>
 
       <div class="modal-footer">
-        <button type="button" id="remove" class="btn btn-secondary mx-auto col-4" data-dismiss="modal">Close</button>      
+        <button type="button" id="remove" class="btn btn-secondary mx-auto col-4" data-dismiss="modal">Close</button>
       </div>
     </button>
   </div>
