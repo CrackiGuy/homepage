@@ -92,6 +92,7 @@
       </div>
 			<div id="dest" class="form-group col-md-12 col-lg-3">
 					<select name="daily[destination]" id="destination" class="select2class" >
+            <option value="default" selected="selected">Destination City</option>
             <?php foreach ($result2 as $city) { ?>
                 <option value="<?php echo $city['id']; ?>"><?php echo $city['title']; ?></option>
               <?php } ?>
