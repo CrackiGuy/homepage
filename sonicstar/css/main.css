@@ -805,16 +805,17 @@
             height: 35px;
         }
         
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        
         input[type="number"] {
             -moz-appearance: textfield;
-            width: 14px;
+            width: 24px;
             border: 0;
+            text-align: center;
+        }
+        
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
         
         button {

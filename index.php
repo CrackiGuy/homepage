@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="sonicstar/css/main.css" />
+        <link rel="stylesheet" href="sonicstar/css/main.css?v=1.0" />
 
     </head>
     <body>
