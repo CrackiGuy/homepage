@@ -26,7 +26,7 @@
 		<div class="form-group col-md-12 col-lg-2">
 			<div class="passenger">
 				<div class="btn btn-light btn-passenger" data-toggle="collapse" 
-				data-target="#demo">
+				data-target="#passengers" onclick="on()">
 				
 				Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" readonly>, 
 				Child <input type="number" name="child_quantity[]" id="child_quantity" value="0" readonly>, 
@@ -34,40 +34,43 @@
 				<input type="hidden" id="total_quantity" name="total_quantity[]" class="input-number" value="1" min="1" max="9">
 			</div>
 				<br>
-				<div id="demo" class="view-passenger collapse ggwp">
-					<div class="input-group ggwp">
-						<div class="row ggwp">
-							<div class="input-group name-holder ggwp">
-								<div class="col-5 ggwp">
-									<span class="name ggwp"><i class="fa fa-male"></i>Adult</span>
+				<div id="overlay" onclick="off()">
+					<div id="passengers" class="view-passenger collapse ggwp">
+						<div class="input-group ggwp">
+							<div class="row ggwp">
+								<div class="input-group name-holder ggwp">
+									<div class="col-5 ggwp">
+										<span class="name ggwp"><i class="fa fa-male"></i>Adult</span>
+									</div>
+									<div class="col-7 ggwp">
+										<button class='minus ggwp' field='quantity'><i class="fa fa-minus ggwp"></i></button>
+										<input type='number' name='quantity' value='1' class='qty_adult ggwp' readonly/>
+										<button class='plus ggwp' field='quantity' ><i class="fa fa-plus ggwp"></i></button>
+									</div>
 								</div>
-								<div class="col-7 ggwp">
-									<button class='minus ggwp' field='quantity'><i class="fa fa-minus ggwp"></i></button>
-									<input type='number' name='quantity' value='1' class='qty_adult ggwp' readonly/>
-									<button class='plus ggwp' field='quantity' ><i class="fa fa-plus ggwp"></i></button>
+								<div class="input-group name-holder ggwp">
+									<div class="col-5 ggwp">
+										<span class="name ggwp"><i class="fa fa-female ggwp"></i>Child</span>
+									</div>
+									<div class="col-7 ggwp">
+										<button class='child_minus ggwp' field='child_quantity' ><i class="fa fa-minus ggwp"></i></button>
+										<input type='number' name='child_quantity' value='0' class='qty' readonly/>
+										<button class='child_plus ggwp' field='child_quantity' ><i class="fa fa-plus ggwp"></i></button>
+									</div>
 								</div>
-							</div>
-							<div class="input-group name-holder ggwp">
-								<div class="col-5 ggwp">
-									<span class="name ggwp"><i class="fa fa-female ggwp"></i>Child</span>
-								</div>
-								<div class="col-7 ggwp">
-									<button class='child_minus ggwp' field='child_quantity' ><i class="fa fa-minus ggwp"></i></button>
-									<input type='number' name='child_quantity' value='0' class='qty' readonly/>
-									<button class='child_plus ggwp' field='child_quantity' ><i class="fa fa-plus ggwp"></i></button>
-								</div>
-							</div>
-							<div class="input-group name-holder ggwp">
-								<div class="col-5 ggwp">
-									<span class="name ggwp"><i class="fa fa-child ggwp"></i>infant</span>
-								</div>
-								<div class="col-7 ggwp">
-									<button class='infant_minus ggwp' field='infant_quantity' ><i class="fa fa-minus ggwp"></i></button>
-									<input type='number' name='infant_quantity' value='0' class='qty' readonly/>
-									<button class='infant_plus ggwp' field='infant_quantity' ><i class="fa fa-plus ggwp"></i></button>
+								<div class="input-group name-holder ggwp">
+									<div class="col-5 ggwp">
+										<span class="name ggwp"><i class="fa fa-child ggwp"></i>infant</span>
+									</div>
+									<div class="col-7 ggwp">
+										<button class='infant_minus ggwp' field='infant_quantity' ><i class="fa fa-minus ggwp"></i></button>
+										<input type='number' name='infant_quantity' value='0' class='qty' readonly/>
+										<button class='infant_plus ggwp' field='infant_quantity' ><i class="fa fa-plus ggwp"></i></button>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- <div onclick="off()" id="done">Done</div> -->
 					</div>
 				</div>
 			</div>

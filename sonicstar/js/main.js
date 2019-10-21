@@ -123,6 +123,8 @@ $(document).ready(function() {
 $(document).click(function(e) {
     if (!$(e.target).is('.ggwp')) {
         $('.collapse').collapse('hide');
+    } else {
+        on();
     }
 });
 
@@ -232,3 +234,11 @@ $('#daily_dropoff_date1').daterangepicker({
 //         format: 'D MMMM YYYY'
 //     }
 // });
+
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}

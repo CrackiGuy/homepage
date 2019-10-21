@@ -323,7 +323,7 @@
   ##Screen = B/w 481px to 767px
 */
         
-        @media (min-width: 481px) and (max-width: 767px) {}
+        @media (min-width:320px) and (max-width: 767px) {}
         /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
@@ -835,4 +835,52 @@
         
         input[type="radio"] {
             margin-right: 7px !important;
+        }
+        
+        .form-group {
+            padding: 0;
+        }
+        
+        #done {
+            display: none;
+        }
+        
+        @media (min-width:320px) and (max-width: 767px) {
+            #overlay {
+                position: fixed;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: 2;
+                cursor: pointer;
+            }
+            #passengers {
+                width: 80%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #done {
+                display: block;
+                border-radius: 0;
+                border: 0;
+                position: absolute;
+                bottom: -42px;
+                width: 100px;
+                height: auto;
+                padding: 10px;
+                background: #bbb;
+                color: #fff;
+                text-align: center;
+                z-index: 3;
+                width: 100%;
+            }
+            #done:hover {
+                background: #bc2220;
+            }
         }
