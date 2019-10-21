@@ -841,12 +841,9 @@
             padding: 0;
         }
         
-        #done {
-            display: none;
-        }
-        
         @media (min-width:320px) and (max-width: 767px) {
-            #overlay {
+            #overlay,
+            #overlay1 {
                 position: fixed;
                 display: none;
                 width: 100%;
@@ -859,28 +856,11 @@
                 z-index: 2;
                 cursor: pointer;
             }
-            #passengers {
+            #passengers,
+            #roundquantity {
                 width: 80%;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-            }
-            #done {
-                display: block;
-                border-radius: 0;
-                border: 0;
-                position: absolute;
-                bottom: -42px;
-                width: 100px;
-                height: auto;
-                padding: 10px;
-                background: #bbb;
-                color: #fff;
-                text-align: center;
-                z-index: 3;
-                width: 100%;
-            }
-            #done:hover {
-                background: #bc2220;
             }
         }

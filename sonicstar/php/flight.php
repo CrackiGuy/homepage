@@ -26,7 +26,7 @@
 		<div class="form-group col-md-12 col-lg-2">
 			<div class="passenger">
 				<div class="btn btn-light btn-passenger" data-toggle="collapse" 
-				data-target="#passengers" onclick="on()">
+				data-target="#passengers" onclick="on('overlay')">
 				
 				Adult <input type="number" name="adult_quantity[]" id="adult_quantity" value="1" readonly>, 
 				Child <input type="number" name="child_quantity[]" id="child_quantity" value="0" readonly>, 
@@ -34,7 +34,7 @@
 				<input type="hidden" id="total_quantity" name="total_quantity[]" class="input-number" value="1" min="1" max="9">
 			</div>
 				<br>
-				<div id="overlay" onclick="off()">
+				<div id="overlay" onclick="off('overlay')">
 					<div id="passengers" class="view-passenger collapse ggwp">
 						<div class="input-group ggwp">
 							<div class="row ggwp">
@@ -124,14 +124,15 @@
 			<div class="form-group col-md-12 col-lg-2">
 			<div class="passenger">
 					<div class="btn btn-light btn-passenger" data-toggle="collapse" 
-					data-target="#roundquantity">
+					data-target="#roundquantity" onclick="on('overlay1')">
 					
 					Adult <input type="number" name="adult_quantity[]" id="round_adult_quantity" value="1" readonly>, 
 					Child <input type="number" name="child_quantity[]" id="round_child_quantity" value="0" readonly>, 
 					Infant <input type="number" name="infant_quantity[]" id="round_infant_quantity" value="0" readonly>
 					<input type="hidden" id="round_total_quantity" name="total_quantity[]" class="input-number" value="1" min="1" max="9">
-				</div>
+					</div>
 					<br>
+					<div id="overlay1" onclick="off('overlay1')">
 					<div id="roundquantity" class="view-passenger collapse">
 						<div class="input-group">
 							<div class="row ggwp">
@@ -167,6 +168,7 @@
 									</div>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>

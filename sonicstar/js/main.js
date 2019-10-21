@@ -121,10 +121,12 @@ $(document).ready(function() {
     });
 });
 $(document).click(function(e) {
+
     if (!$(e.target).is('.ggwp')) {
         $('.collapse').collapse('hide');
     } else {
-        on();
+        on('overlay');
+        on('overlay1');
     }
 });
 
@@ -140,6 +142,8 @@ function openTab(evt, tabName) {
     }
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " aa";
+    off('overlay');
+    off('overlay1');
 }
 
 function openCar(evt, tabName) {
@@ -235,10 +239,10 @@ $('#daily_dropoff_date1').daterangepicker({
 //     }
 // });
 
-function on() {
-    document.getElementById("overlay").style.display = "block";
+function on(str) {
+    document.getElementById(str).style.display = "block";
 }
 
-function off() {
-    document.getElementById("overlay").style.display = "none";
+function off(str) {
+    document.getElementById(str).style.display = "none";
 }
