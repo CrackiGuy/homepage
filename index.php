@@ -33,7 +33,7 @@
                         <span class="d-none d-lg-inline"> Air Ticketing</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#car">
+                    <a class="nav-link" href="https://www.sonicstartravel.com/car_rental">
                         <i class="fa fa-car" aria-hidden="true"></i>
                         <span class="d-none d-lg-inline">Car Rental</span></a>
                 </li>
@@ -184,7 +184,6 @@
             </div>
             <?php
             $conn->close();
-
     ?>
         </footer>
         <a href="https://www.messenger.com/t/2360944740816813/" class="float" target="_blank">
