@@ -4,11 +4,11 @@
 </div>
 
 <div id="one" class="tabcontent" style="display:block">
-	<form class="form-inline" action="https://www.sonicstartravel.com/flight/public/search" method="GET">
+	<form class="form-inline" action="https://www.sonicstartravel.com/flight/public/search" method="GET" id="onewaysubmitform">
 		<input name="flight_count" value="1" id="flight_count" type="hidden">
 		<input type="hidden" name="page" value="0" >
 		<input type="hidden" name="flight_status" value="oneway">
-		<div class="form-group col-md-12 col-lg-3">
+		<div class="form-group col-md-12 col-lg-3" id="alertcolor">
 			<select class="select2class" id="box1" name="departure_location[]">
 		
 			</select>
@@ -75,29 +75,38 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-12" style="height:35px;"></div>
-		<div class="form-group col-8 col-full">
-			<div class="radio-view">
-			<div class="form-check-inline">
-				<label class="form-check-label" for="radio2">
-					<input type="radio" class="form-check-input" id="radio2" name="nationality" value="F" checked>Forienger
+
+		<div class="col-12" style="height:20px;"></div>
+		
+
+		<div class="form-group col-8 col-full ">
+			<div class="radio-view warning" >
+			   <div class="form-check-inline">
+				<label style="font-size:16px;font-weight:bold;color:red;">Myanmar Citizen</label>
+				</div><br>
+			   <div class="form-check-inline">
+				<label class="form-check-label" for="radio2" style="padding-left: 0px;">
+				    <input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Yes
+					
 				</label>
 				</div>
 				<div class="form-check-inline">
 				<label class="form-check-label" for="radio1">
-					<input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Myanmar Citizen
+					<input type="radio" class="form-check-input" id="radio2" name="nationality" value="F">No
 				</label>
 				</div>
+
 			</div>
 		</div>
 		
 		<div class="form-group col-4">
-		<button type="submit" id="onewaysubmit" class="btn-search">Search</button>
+		<button type="button" id="onewaysubmit" class="btn-search float-right">Search</button>
 		</div>
+		
 	</form>
 </div>
 <div id="round" class="tabcontent">
-	<form class="form-inline" action="https://www.sonicstartravel.com/flight/public/search" method="GET">
+	<form class="form-inline" action="https://www.sonicstartravel.com/flight/public/search" method="GET" id="roundtripsubmit">
 		<input name="flight_count" value="2" id="flight_count" type="hidden">
 		<input name="flight_status" value="roundtrip" type="hidden">
 		<input name="page" value="0" id="flight_count" type="hidden">
@@ -171,24 +180,28 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12" style="height:35px;"></div>
-			<div class="form-group col-8 col-full">
-				<div class="radio-view">
+			<div class="col-12" style="height:20px;"></div>
+			<div class="form-group col-8 col-full ">
+				<div class="radio-view warning">
 				<div class="form-check-inline">
-					<label class="form-check-label" for="radio2">
-						<input type="radio" class="form-check-input round_radio2" id="radio2" name="nationality" value="F" checked>Forienger
+				<label style="font-size:16px;font-weight:bold;color:red;">Myanmar Citizen</label>
+				</div><br>
+			
+					<div class="form-check-inline">
+					<label class="form-check-label" for="radio1">
+						<input type="radio" class="form-check-input round_radio1"  name="nationality" value="L" >Yes
 					</label>
 					</div>
 					<div class="form-check-inline">
-					<label class="form-check-label" for="radio1">
-						<input type="radio" class="form-check-input round_radio1" id="radio1" name="nationality" value="L" >Myanmar Citizen
+					<label class="form-check-label" for="radio2">
+						<input type="radio" class="form-check-input round_radio2"  name="nationality" value="F" >No
 					</label>
 					</div>
 					
 				</div>
 			</div>
 			<div class="form-group col-4">
-			<button type="submit" id="round_submit" class="btn-search">Search</button>
+			<button type="button" id="round_submit" class="btn-search float-right">Search</button>
 			</div>
 	</form>
 </div>

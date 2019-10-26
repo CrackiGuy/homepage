@@ -20,6 +20,11 @@ $(document).ready(function() {
     $(".qty_adult").val(1);
 
 
+    $('#radio1').prop('checked', false);
+    $('#radio2').prop('checked', false);
+    $('.round_radio1').prop('checked', false);
+    $('.round_radio2').prop('checked', false);
+
 
     var flightto = "";
     flightto += "<option value='origin'>Flight To</option>";
@@ -85,13 +90,13 @@ toCity.on("change", function() {
                 if ($('#round_arrival_location').val()==item.name) {
                   
                     items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
-                   submit.attr("disabled", true);
+                //    submit.attr("disabled", true);
                   
                 }else{
     
                     if ($('#round_arrival_location').val()=="origin") {
                         items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
-                        submit.attr("disabled", true);
+                        // submit.attr("disabled", true);
                     } else {
                         items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                     }
@@ -300,19 +305,78 @@ $(document).ready(function() {
 function firstcondition() {
 
 
-    var from_original = $("#box1").val();
-    var to_original = $("#box2").val();
+    // var from_original = $("#box1").val();
+    // var to_original = $("#box2").val();
 
 
-    if (from_original == "origin" || to_original == "origin" || from_original == null || to_original == null) {
+    // if (from_original == "origin" || to_original == "origin" || from_original == null || to_original == null) {
 
-        submit.attr("disabled", true);
+    //     submit.attr("disabled", true);
 
-    } else {
-        submit.attr("disabled", false);
-    }
+    // } else {
+    //     submit.attr("disabled", false);
+    // }
 
 }
+$("#onewaysubmit").click(function (e) {
+    e.preventDefault();
+    var from_original = $("#box1").val();
+        var to_original = $("#box2").val();
+        if (from_original == "origin" ||  from_original == null) {
+    
+            // submit.attr("disabled", true);
+            // $("#box1").css("border-color", "yellow");
+            // $("#alertcolor").css("border-style", "solid");
+            // // $("#box1").css("border-style", "solid");
+            // // $("#box1").css("border-color", "yellow");
+            // $("#alertcolor").css('border-color', 'yellow');
+            $("#box1").siblings(".select2-container").css('border-bottom', '2px solid red');
+            if (!$("#radio2").is(":checked") || !$("#radio1").is(":checked")) {
+                $('.warning').css('border-bottom', '2px solid red'); 
+            }else{
+                $('.warning').css('border-bottom', 'none'); 
+            }
+         
+        }
+        else{
+            $("#box1").siblings(".select2-container").css('border-bottom', 'none');
+        }
+
+         if(to_original == "origin" || to_original == null ){
+   
+            $("#box2").siblings(".select2-container").css('border-bottom', '2px solid red');
+            
+        } else{
+            $("#box2").siblings(".select2-container").css('border', 'none');
+            
+        } 
+        if ($("#radio2").is(":checked") || $("#radio1").is(":checked") )
+        {
+            $('.warning').css('border-bottom', 'none');
+           
+        }else{
+            
+            $('.warning').css('border-bottom', '2px solid red');
+          
+        }
+        if(from_original == "origin" ||  from_original == null || to_original == "origin" || to_original == null){
+            console.log('worry');
+        }else{
+
+                if ($("#radio2").is(":checked") || $("#radio1").is(":checked") )
+                {
+                    $("#onewaysubmitform").submit();
+                   
+                }else{
+                    
+                    $('.warning').css('border-bottom', '2px solid red');
+                    // $(".custom-control-input").css('background-color','red');
+                    // $("#radio1").css('border-color','red');
+                    // alert("Please check one vehicle type.");
+                }
+      
+        }
+});
 
 function checkTheDropdowns() {
 
@@ -333,12 +397,12 @@ function checkTheDropdowns() {
             if ($('#box1').val() == item.name) {
                 // toCity.attr("disabled", true);
                 console.log($('#box1').val()+"ddd");
-                submit.attr("disabled", true);
+                // submit.attr("disabled", true);
 
             } else {
                 if ($('#box1').val() == "origin") {                       
                     items += "<option value='" + item.name + "'>" + item.name + "&nbsp;(" + item.short_code + ")</option>";
-                    submit.attr("disabled", true);
+                    // submit.attr("disabled", true);
                 } else {      
                     items += "<option value='" + item.name + "'>" + item.name + "&nbsp;(" + item.short_code + ")</option>";
                 }
