@@ -38,9 +38,53 @@ $( document ).ready(function() {
    $("#departure_date").val(moment().add('days', 1).format('L'));
    $("#return_date").val(moment().add('days', 1).format('L'));
    roundtoCity.attr("disabled", true);
-   round_submit.attr("disabled", true);   
+//    round_submit.attr("disabled", true);   
  
 
+});
+
+$("#round_submit").click(function (e) {
+    e.preventDefault();
+    var from_original = $("#round_departure_location").val();
+        var to_original = $("#round_arrival_location").val();
+        if (from_original == "origin" ||  from_original == null ) {
+    
+            // submit.attr("disabled", true);
+            // $("#box1").css("border-color", "yellow");
+            // $("#alertcolor").css("border-style", "solid");
+            // // $("#box1").css("border-style", "solid");
+            // // $("#box1").css("border-color", "yellow");
+            // $("#alertcolor").css('border-color', 'yellow');
+            $("#round_departure_location").siblings(".select2-container").css('border-bottom', '2px solid red');
+                     
+        }
+        else{
+            $("#round_departure_location").siblings(".select2-container").css('border-bottom', 'none');
+        }
+
+         if(to_original == "origin" || to_original == null){
+   
+            $("#round_arrival_location").siblings(".select2-container").css('border-bottom', '2px solid red');
+        } else{
+            $("#round_arrival_location").siblings(".select2-container").css('border', 'none');
+        } 
+        if(from_original == "origin" ||  from_original == null || to_original == "origin" || to_original == null){
+            console.log('worry');
+        }else{
+
+                if ($(".round_radio1").is(":checked") || $(".round_radio2").is(":checked") )
+                {
+                    $("#roundtripsubmit").submit();
+                   
+                }else{
+                    
+                    $('.warning').css('border-bottom', '2px solid red');
+                    // $(".custom-control-input").css('background-color','red');
+                    // $("#radio1").css('border-color','red');
+                    // alert("Please check one vehicle type.");
+                }
+      
+        }
 });
 
 roundfromCity.on("change",function(){
@@ -59,13 +103,13 @@ roundfromCity.on("change",function(){
               
                console.log($('#round_departure_location').val());
                console.log($('#round_arrival_location').val());
-               round_submit.attr("disabled", true);
+            //    round_submit.attr("disabled", true);
               
             }else if($('#round_departure_location').val()!=item.name){
 
                 if ($('#round_departure_location').val()=="origin") {
                     roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
-                    round_submit.attr("disabled", true);
+                    // round_submit.attr("disabled", true);
                 } else {
                     roundflightto+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                 }
@@ -125,13 +169,13 @@ roundtoCity.on("change",function(){
                 if ($('#round_arrival_location').val()==item.name) {
                   
                     items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
-                   round_submit.attr("disabled", true);
+                //    round_submit.attr("disabled", true);
                   
                 }else{
     
                     if ($('#round_arrival_location').val()=="origin") {
                         items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
-                        round_submit.attr("disabled", true);
+                        // round_submit.attr("disabled", true);
                     } else {
                         items+="<option value='"+item.name+"'>"+item.name+"&nbsp;("+item.short_code+")</option>";
                     }
@@ -354,7 +398,7 @@ roundtoCity.on("change",function(){
         if (roundfromCity=="origin" || roundtoCity=="origin") {
     
             console.log("s");
-            round_submit.attr("disabled", true);
+            // round_submit.attr("disabled", true);
           
         }else{
             round_submit.attr("disabled", false);
