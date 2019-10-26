@@ -322,7 +322,7 @@ $("#onewaysubmit").click(function (e) {
     e.preventDefault();
     var from_original = $("#box1").val();
         var to_original = $("#box2").val();
-        if (from_original == "origin" ||  from_original == null ) {
+        if (from_original == "origin" ||  from_original == null) {
     
             // submit.attr("disabled", true);
             // $("#box1").css("border-color", "yellow");
@@ -331,18 +331,34 @@ $("#onewaysubmit").click(function (e) {
             // // $("#box1").css("border-color", "yellow");
             // $("#alertcolor").css('border-color', 'yellow');
             $("#box1").siblings(".select2-container").css('border-bottom', '2px solid red');
-                     
+            if (!$("#radio2").is(":checked") || !$("#radio1").is(":checked")) {
+                $('.warning').css('border-bottom', '2px solid red'); 
+            }else{
+                $('.warning').css('border-bottom', 'none'); 
+            }
+         
         }
         else{
             $("#box1").siblings(".select2-container").css('border-bottom', 'none');
         }
 
-         if(to_original == "origin" || to_original == null){
+         if(to_original == "origin" || to_original == null ){
    
             $("#box2").siblings(".select2-container").css('border-bottom', '2px solid red');
+            
         } else{
             $("#box2").siblings(".select2-container").css('border', 'none');
+            
         } 
+        if ($("#radio2").is(":checked") || $("#radio1").is(":checked") )
+        {
+            $('.warning').css('border-bottom', 'none');
+           
+        }else{
+            
+            $('.warning').css('border-bottom', '2px solid red');
+          
+        }
         if(from_original == "origin" ||  from_original == null || to_original == "origin" || to_original == null){
             console.log('worry');
         }else{

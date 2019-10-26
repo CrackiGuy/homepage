@@ -68,6 +68,18 @@ $("#round_submit").click(function (e) {
         } else{
             $("#round_arrival_location").siblings(".select2-container").css('border', 'none');
         } 
+        if ($(".round_radio1").is(":checked") || $(".round_radio2").is(":checked") )
+        {
+            $('.warning').css('border-bottom', 'none');
+           
+        }else{
+            
+            $('.warning').css('border-bottom', '2px solid red');
+            // $(".custom-control-input").css('background-color','red');
+            // $("#radio1").css('border-color','red');
+            // alert("Please check one vehicle type.");
+        }
+
         if(from_original == "origin" ||  from_original == null || to_original == "origin" || to_original == null){
             console.log('worry');
         }else{
