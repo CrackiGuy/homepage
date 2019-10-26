@@ -76,7 +76,7 @@
 			</div>
 		</div>
 		<div class="col-12" style="height:35px;"></div>
-		<div class="form-group col-9">
+		<div class="form-group col-8 col-full">
 			<div class="radio-view">
 			<div class="form-check-inline">
 				<label class="form-check-label" for="radio2">
@@ -85,15 +85,14 @@
 				</div>
 				<div class="form-check-inline">
 				<label class="form-check-label" for="radio1">
-					<input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Citizen
+					<input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Myanmar Citizen
 				</label>
 				</div>
-				
 			</div>
 		</div>
 		
-		<div class="form-group col-3">
-		<button type="submit" id="onewaysubmit" class="btn-search float-right">Search</button>
+		<div class="form-group col-4">
+		<button type="submit" id="onewaysubmit" class="btn-search">Search</button>
 		</div>
 	</form>
 </div>
@@ -173,7 +172,7 @@
 				</div>
 			</div>
 			<div class="col-12" style="height:35px;"></div>
-			<div class="form-group col-9">
+			<div class="form-group col-8 col-full">
 				<div class="radio-view">
 				<div class="form-check-inline">
 					<label class="form-check-label" for="radio2">
@@ -182,14 +181,14 @@
 					</div>
 					<div class="form-check-inline">
 					<label class="form-check-label" for="radio1">
-						<input type="radio" class="form-check-input round_radio1" id="radio1" name="nationality" value="L" >Citizen
+						<input type="radio" class="form-check-input round_radio1" id="radio1" name="nationality" value="L" >Myanmar Citizen
 					</label>
 					</div>
 					
 				</div>
 			</div>
-			<div class="form-group col-3">
-			<button type="submit" id="round_submit" class="btn-search float-right">Search</button>
+			<div class="form-group col-4">
+			<button type="submit" id="round_submit" class="btn-search">Search</button>
 			</div>
 	</form>
 </div>
