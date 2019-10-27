@@ -71,6 +71,8 @@ $("#round_submit").click(function (e) {
         if ($(".round_radio1").is(":checked") || $(".round_radio2").is(":checked") )
         {
             $('.warning').css('border-bottom', 'none');
+
+            
            
         }else{
             
