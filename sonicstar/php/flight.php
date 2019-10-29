@@ -79,19 +79,19 @@
 		<div class="col-12" style="height:20px;"></div>
 		
 
-		<div class="form-group col-8 col-full ">
-			<div class="radio-view warning" >
+		<div class="form-group col-6 col-md-8 ">
+			<div class="radio-view warningone" >
 			   <div class="form-check-inline">
 				<label style="font-size:16px;font-weight:bold;color:red;">Myanmar Citizen</label>
 				</div><br>
 			   <div class="form-check-inline">
-				<label class="form-check-label" for="radio2" style="padding-left: 0px;">
+				<label class="form-check-label" for="radio1" style="padding-left: 0px;">
 				    <input type="radio" class="form-check-input" id="radio1" name="nationality" value="L" >Yes
 					
 				</label>
 				</div>
 				<div class="form-check-inline">
-				<label class="form-check-label" for="radio1">
+				<label class="form-check-label" for="radio2">
 					<input type="radio" class="form-check-input" id="radio2" name="nationality" value="F">No
 				</label>
 				</div>
@@ -99,7 +99,7 @@
 			</div>
 		</div>
 		
-		<div class="form-group col-4">
+		<div class="form-group col-6 col-md-4">
 		<button type="button" id="onewaysubmit" class="btn-search float-right">Search</button>
 		</div>
 		
@@ -181,26 +181,26 @@
 				</div>
 			</div>
 			<div class="col-12" style="height:20px;"></div>
-			<div class="form-group col-8 col-full ">
-				<div class="radio-view warning">
+			<div class="form-group col-6 col-md-8">
+				<div class="radio-view warninground">
 				<div class="form-check-inline">
 				<label style="font-size:16px;font-weight:bold;color:red;">Myanmar Citizen</label>
 				</div><br>
 			
 					<div class="form-check-inline">
-					<label class="form-check-label" for="radio1">
-						<input type="radio" class="form-check-input round_radio1"  name="nationality" value="L" >Yes
+					<label class="form-check-label" for="radio_ro12">
+						<input type="radio" class="form-check-input round_radio1" id="radio_ro12" name="nationality" value="L" >Yes
 					</label>
 					</div>
 					<div class="form-check-inline">
-					<label class="form-check-label" for="radio2">
-						<input type="radio" class="form-check-input round_radio2"  name="nationality" value="F" >No
+					<label class="form-check-label" for="radio_ro22">
+						<input type="radio" class="form-check-input round_radio2" id="radio_ro22"  name="nationality" value="F" >No
 					</label>
 					</div>
 					
 				</div>
 			</div>
-			<div class="form-group col-4">
+			<div class="form-group col-6 col-md-4">
 			<button type="button" id="round_submit" class="btn-search float-right">Search</button>
 			</div>
 	</form>

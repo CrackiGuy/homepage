@@ -70,13 +70,13 @@ $("#round_submit").click(function (e) {
         } 
         if ($(".round_radio1").is(":checked") || $(".round_radio2").is(":checked") )
         {
-            $('.warning').css('border-bottom', 'none');
+            $('.warninground').css('border-bottom', 'none');
 
             
            
         }else{
             
-            $('.warning').css('border-bottom', '2px solid red');
+            $('.warninground').css('border-bottom', '2px solid red');
             // $(".custom-control-input").css('background-color','red');
             // $("#radio1").css('border-color','red');
             // alert("Please check one vehicle type.");
@@ -92,7 +92,7 @@ $("#round_submit").click(function (e) {
                    
                 }else{
                     
-                    $('.warning').css('border-bottom', '2px solid red');
+                    $('.warninground').css('border-bottom', '2px solid red');
                     // $(".custom-control-input").css('background-color','red');
                     // $("#radio1").css('border-color','red');
                     // alert("Please check one vehicle type.");

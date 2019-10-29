@@ -331,11 +331,7 @@ $("#onewaysubmit").click(function (e) {
             // // $("#box1").css("border-color", "yellow");
             // $("#alertcolor").css('border-color', 'yellow');
             $("#box1").siblings(".select2-container").css('border-bottom', '2px solid red');
-            if (!$("#radio2").is(":checked") || !$("#radio1").is(":checked")) {
-                $('.warning').css('border-bottom', '2px solid red'); 
-            }else{
-                $('.warning').css('border-bottom', 'none'); 
-            }
+         
          
         }
         else{
@@ -352,11 +348,11 @@ $("#onewaysubmit").click(function (e) {
         } 
         if ($("#radio2").is(":checked") || $("#radio1").is(":checked") )
         {
-            $('.warning').css('border-bottom', 'none');
+            $('.warningone').css('border-bottom', 'none');
            
         }else{
             
-            $('.warning').css('border-bottom', '2px solid red');
+            $('.warningone').css('border-bottom', '2px solid red');
           
         }
         if(from_original == "origin" ||  from_original == null || to_original == "origin" || to_original == null){
@@ -369,7 +365,7 @@ $("#onewaysubmit").click(function (e) {
                    
                 }else{
                     
-                    $('.warning').css('border-bottom', '2px solid red');
+                    $('.warningone').css('border-bottom', '2px solid red');
                     // $(".custom-control-input").css('background-color','red');
                     // $("#radio1").css('border-color','red');
                     // alert("Please check one vehicle type.");
