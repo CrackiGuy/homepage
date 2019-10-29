@@ -834,13 +834,15 @@
             .form-control[readonly] {
                 background-color: #fff;
             }
-            
+            /* .form-control{
+
+            } */
             input[type="radio"] {
                 margin-right: 7px !important;
             }
             
             .form-group {
-                padding: 0;
+                padding: 4px;
             }
             
             @media (min-width:320px) and (max-width: 767px) {
