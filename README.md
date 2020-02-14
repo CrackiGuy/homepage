@@ -8,4 +8,4 @@
 ![Creative Portfolios](static/cp-screenshot-2.png)
 
 
-### Developed by Nay Lin Aung :trollface:
+### Developed by Nay Lin Aung ,Zin Lynn Htun :trollface:
